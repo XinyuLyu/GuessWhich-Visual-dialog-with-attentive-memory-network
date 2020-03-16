@@ -24,7 +24,11 @@ Xinyu Lyu
 ### Test result:   
    1. Qbot![](https://github.com/XinyuLyu/Visual-Dialog/blob/master/test_results/Xnip2020-03-16_14-17-45.jpg)
    2. Abot![](https://github.com/XinyuLyu/Visual-Dialog/blob/master/test_results/Xnip2020-03-16_14-18-24.jpg)
-   3. Image Retrieval
-    ![](https://github.com/XinyuLyu/Visual-Dialog/blob/master/test_results/1.png)
-    ![](https://github.com/XinyuLyu/Visual-Dialog/blob/master/test_results/1.png)
+   3. Visualization
+    ![](https://github.com/XinyuLyu/Visual-Dialog/blob/master/test_results/1.jpg)
+    ![](https://github.com/XinyuLyu/Visual-Dialog/blob/master/test_results/2.jpg)
+    ![](https://github.com/XinyuLyu/Visual-Dialog/blob/master/test_results/3.jpg)
+    ![](https://github.com/XinyuLyu/Visual-Dialog/blob/master/test_results/4.jpg)
+    ![](https://github.com/XinyuLyu/Visual-Dialog/blob/master/test_results/5.jpg)
+
  
