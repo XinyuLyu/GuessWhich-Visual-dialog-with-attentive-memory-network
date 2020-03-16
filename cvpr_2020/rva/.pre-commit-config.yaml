@@ -9,5 +9,5 @@ repos:
     hooks:
     - id: flake8
     - id: trailing-whitespace
-    - id: check-added-large-files
+    - id: check-added-large-test_results
     - id: end-of-file-fixer

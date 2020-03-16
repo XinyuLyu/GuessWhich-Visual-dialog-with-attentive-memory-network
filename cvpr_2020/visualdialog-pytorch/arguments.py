@@ -43,7 +43,7 @@ def get_args():
   parser.add_argument('--num_abots', type=int, default=1, help='how many abots')
   parser.add_argument('--num_qbots', type=int, default=1, help='how many qbots')
   parser.add_argument('--img_feat_size', type=int, default=4096, help='size of image embedding')
-  parser.add_argument('--no-save', action='store_true', default=False, help='specify if dont want to save model files')
+  parser.add_argument('--no-save', action='store_true', default=False, help='specify if dont want to save model test_results')
   opt = parser.parse_args()
   opt.cuda = not opt.no_cuda
   return opt

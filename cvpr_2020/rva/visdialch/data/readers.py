@@ -143,7 +143,7 @@ class DenseAnnotationsReader(object):
 
 class ImageFeaturesHdfReader(object):
     """
-    A reader for HDF files containing pre-extracted image features. A typical HDF file is expected
+    A reader for HDF test_results containing pre-extracted image features. A typical HDF file is expected
     to have a column named "image_id", and another column named "features".
 
     Example of an HDF file:
@@ -160,7 +160,7 @@ class ImageFeaturesHdfReader(object):
     features_hdfpath : str
         Path to an HDF file containing VisDial v1.0 train, val or test split image features.
     in_memory : bool
-        Whether to load the whole HDF file in memory. Beware, these files are sometimes tens of GBs
+        Whether to load the whole HDF file in memory. Beware, these test_results are sometimes tens of GBs
         in size. Set this to true if you have sufficient RAM - trade-off between speed and memory.
     """
 

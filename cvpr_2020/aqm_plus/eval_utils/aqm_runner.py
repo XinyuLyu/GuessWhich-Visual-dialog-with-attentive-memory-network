@@ -89,7 +89,7 @@ class AQMRunner:
         if '%s_img_fnames' % split not in dataset.data.keys():
             raise RuntimeError("Need coco directory and info as input " \
                   "to -cocoDir and -cocoInfo arguments for locating " \
-                  "coco image files.")
+                  "coco image test_results.")
         self.getImgFileName = lambda x: self.dataset.data['%s_img_fnames' % split][x]
         self.getImgId = lambda x: int(self.getImgFileName(x)[:-4][-12:])
 

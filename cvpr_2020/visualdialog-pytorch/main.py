@@ -534,7 +534,7 @@ if opt.model_path != '':
             load_my_state_dict(qbots[j][2],checkpoint['netGQ'+str(j)])
 
 else:
-    assert not opt.eval and opt.scratch, "Must specify model files if not starting evaluating or training from scratch"
+    assert not opt.eval and opt.scratch, "Must specify model test_results if not starting evaluating or training from scratch"
 
 if opt.cuda: # ship to cuda, if has GPU
     for k in range(opt.num_abots):

@@ -1,6 +1,6 @@
 """
 A checkpoint manager periodically saves model and optimizer as .pth
-files during training.
+test_results during training.
 
 Checkpoint managers help with experiment reproducibility, they record
 the commit SHA of your current codebase in the checkpoint saving
@@ -23,7 +23,7 @@ import yaml
 
 class CheckpointManager(object):
     """A checkpoint manager saves state dicts of model and optimizer
-    as .pth files in a specified directory. This class closely follows
+    as .pth test_results in a specified directory. This class closely follows
     the API of PyTorch optimizers and learning rate schedulers.
 
     Note::

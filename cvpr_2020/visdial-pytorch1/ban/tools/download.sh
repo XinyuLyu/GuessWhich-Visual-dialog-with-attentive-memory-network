@@ -43,7 +43,7 @@ rm data/test2015.zip
 
 # Download Pickle caches for the pretrained model from
 # https://drive.google.com/file/d/1m5pL9gOkcnLZ_NuANmnDFIcil3NQVmZc/view?usp=sharing
-# and extract pkl files under data/cache/.
+# and extract pkl test_results under data/cache/.
 mkdir -p data/cache
 wget --no-check-certificate 'https://drive.google.com/uc?export=download&id=1m5pL9gOkcnLZ_NuANmnDFIcil3NQVmZc' -O data/cache/cache.pkl.tgz
 tar xvf data/cache/cache.pkl.tgz -C data/cache/

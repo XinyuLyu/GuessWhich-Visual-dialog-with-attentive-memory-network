@@ -205,12 +205,12 @@ if __name__ == "__main__":
     parser.add_argument('-download', default=0, type=int, help='Whether to download VisDial v0.9 data')
     parser.add_argument('-version', default='0.5', help='Choose the dataset version: 0.5 | 0.9', choices=['0.5', '0.9'])
 
-    # Input files
+    # Input test_results
     parser.add_argument('-input_json_train', default='visdial_0.5_train.json', help='Input `train` json file')
     parser.add_argument('-input_json_val', default='visdial_0.5_val.json', help='Input `val` json file')
     parser.add_argument('-input_json_test', default='visdial_0.5_test.json', help='Input `test` json file')
 
-    # Output files
+    # Output test_results
     parser.add_argument('-output_json', default='visdial/chat_processed_params.json', help='Output json file')
     parser.add_argument('-output_h5', default='visdial/chat_processed_data.h5', help='Output hdf5 file')
 

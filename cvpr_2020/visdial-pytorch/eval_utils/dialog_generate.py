@@ -67,8 +67,8 @@ def dialogDump(params,
     if '%s_img_fnames' % split not in dataset.data.keys():
         print("[Error] Need coco directory and info as input " \
                "to -cocoDir and -cocoInfo arguments for locating "\
-               "coco image files.")
-        print("Exiting dialogDump without saving files.")
+               "coco image test_results.")
+        print("Exiting dialogDump without saving test_results.")
         return None
 
     getImgFileName = lambda x: dataset.data['%s_img_fnames' % split][x]

@@ -33,7 +33,7 @@ cd data
 wget https://filebox.ece.vt.edu/~jiasenlu/codeRelease/visDial.pytorch/data/vdl_img_vgg.h5
 wget https://filebox.ece.vt.edu/~jiasenlu/codeRelease/visDial.pytorch/data/visdial_data.h5
 wget https://filebox.ece.vt.edu/~jiasenlu/codeRelease/visDial.pytorch/data/visdial_params.json
-# however, these data files have 512x7x7 image embeddings, in place of which we 
+test_results
 # used 4096 size image embeddings. we download that in another folder
 mkdir v09
 cd v09
