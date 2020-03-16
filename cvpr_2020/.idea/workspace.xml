@@ -1,0 +1,1684 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="8a95359a-eb6e-41c4-8192-ce59869dc556" name="Default Changelist" comment="" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="cvpr_2020">
+      <favorite_root url="file://$PROJECT_DIR$/visdial-pytorch1/evaluate_dialog.py" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+    </favorites_list>
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/visdial-pytorch1/dataloader_output.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1500">
+              <caret line="108" column="83" selection-start-line="108" selection-start-column="83" selection-end-line="108" selection-end-column="83" />
+              <folding>
+                <element signature="e#0#9#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/visdial-pytorch1/debug_train_output.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="240">
+              <caret line="20" column="15" selection-start-line="20" selection-start-column="15" selection-end-line="20" selection-end-column="15" />
+              <folding>
+                <element signature="e#0#13#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/visdial-pytorch1/test.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="300">
+              <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
+              <folding>
+                <element signature="e#0#11#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>answerer</find>
+      <find>_img_fv_global</find>
+      <find>aBot</find>
+      <find>image</find>
+      <find>imageEmbed</find>
+      <find>dialogRNN</find>
+      <find>predict</find>
+      <find>imgNet</find>
+      <find>fc1</find>
+      <find>trainMode</find>
+      <find>mean</find>
+      <find>img</find>
+      <find>questioner</find>
+      <find>if agent</find>
+      <find>ans</find>
+      <find>ansRNN</find>
+      <find>answer</find>
+      <find>evalMode</find>
+      <find>dataloader_09</find>
+      <find>VisDialDataset</find>
+      <find>quesFile</find>
+      <find>dataMa</find>
+      <find>dataMat</find>
+      <find>dataset</find>
+      <find>Processing split [train</find>
+      <find>Processing split [train]</find>
+      <find>Processing</find>
+      <find>subsets</find>
+      <find>loadLabel</find>
+      <find>saveLabel</find>
+    </findStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="ROOT_SYNC" value="DONT_SYNC" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/visdial-pytorch/data/download_model.sh" />
+        <option value="$PROJECT_DIR$/visdial-pytorch/data/prepro_utils.lua" />
+        <option value="$PROJECT_DIR$/visdial-pytorch/data/prepro_img_pool5.lua" />
+        <option value="$PROJECT_DIR$/visdial-pytorch/data/prepro_img_vgg19.lua" />
+        <option value="$PROJECT_DIR$/visdial-pytorch1/debug_train_top_down2.py" />
+        <option value="$PROJECT_DIR$/visdial-pytorch1/visdial/models/answerer_top_down2.py" />
+        <option value="$PROJECT_DIR$/visdial-pytorch1/visdial/models/answerer_top_down.py" />
+        <option value="$PROJECT_DIR$/visdial-pytorch1/utils/utilities_top_down.py" />
+        <option value="$PROJECT_DIR$/visdial-pytorch1/dataloader_top_down1.py" />
+        <option value="$PROJECT_DIR$/visdial-pytorch1/dataloader_top_down2.py" />
+        <option value="$PROJECT_DIR$/visdial-pytorch1/utils/utilities_top_down1.py" />
+        <option value="$PROJECT_DIR$/visdial-pytorch1/dataloader_top_down.py" />
+        <option value="$PROJECT_DIR$/visdial-pytorch1/visdial/models/decoders/gen_7.py" />
+        <option value="$PROJECT_DIR$/visdial-pytorch1/visdial/models/decoders/gen_MN7.py" />
+        <option value="$PROJECT_DIR$/visdial-pytorch1/visdial/models/encoders/hre_MN7.py" />
+        <option value="$PROJECT_DIR$/visdial-pytorch1/visdial/models/decoders/gen1.py" />
+        <option value="$PROJECT_DIR$/aqm_plus/evaluate.py" />
+        <option value="$PROJECT_DIR$/visdial-pytorch1/utils/utilities_top_down2.py" />
+        <option value="$PROJECT_DIR$/visdial-pytorch1/rva/RVA.py" />
+        <option value="$PROJECT_DIR$/visdial-pytorch1/evaluate_print1.py" />
+        <option value="$PROJECT_DIR$/visdial-pytorch1/evaluate_dialog.py" />
+        <option value="$PROJECT_DIR$/visdial-pytorch1/visdial/models/encoders/hre_MN5.py" />
+        <option value="$PROJECT_DIR$/visdial-pytorch1/visdial/models/questioner_predict.py" />
+        <option value="$PROJECT_DIR$/visdial-pytorch1/visdial/models/encoders/hre_MN4.py" />
+        <option value="$PROJECT_DIR$/visdial-pytorch1/utils/utilities_questioner_predict.py" />
+        <option value="$PROJECT_DIR$/visdial-pytorch1/options.py" />
+        <option value="$PROJECT_DIR$/visdial-pytorch/test.py" />
+        <option value="$PROJECT_DIR$/visdial-pytorch/debug_train_diversity.py" />
+        <option value="$PROJECT_DIR$/visdial-pytorch/dataloader_vgg_mean.py" />
+        <option value="$PROJECT_DIR$/visdial-pytorch/debug_train.py" />
+        <option value="$PROJECT_DIR$/visdial-pytorch/debug_options.py" />
+        <option value="$PROJECT_DIR$/visdial-pytorch/dataloader_vgg_mean_global.py" />
+        <option value="$PROJECT_DIR$/visdial-pytorch/eval_utils/rank_answerer1.py" />
+        <option value="$PROJECT_DIR$/visdial-pytorch/debug_train1.py" />
+        <option value="$PROJECT_DIR$/visdial-pytorch/visdial/models/encoders/hre_Mn6.py" />
+        <option value="$PROJECT_DIR$/visdial-pytorch/visdial/models/encoders/hre_MN6.py" />
+        <option value="$PROJECT_DIR$/visdial-pytorch/eval_utils/rank_answerer.py" />
+        <option value="$PROJECT_DIR$/visdial-pytorch1/visdial/models/encoders/hre_MN8.py" />
+        <option value="$PROJECT_DIR$/visdial-pytorch1/visdial/models/answerer_predict.py" />
+        <option value="$PROJECT_DIR$/visdial-pytorch1/debug_options.py" />
+        <option value="$PROJECT_DIR$/visdial-pytorch/visdial/models/questioner_predict.py" />
+        <option value="$PROJECT_DIR$/visdial-pytorch/visdial/models/encoders/hre_MN5.py" />
+        <option value="$PROJECT_DIR$/visdial-pytorch/evaluate_print.py" />
+        <option value="$PROJECT_DIR$/visdial-pytorch/visdial/models/answerer_predict.py" />
+        <option value="$PROJECT_DIR$/visdial-pytorch1/evaluate_print.py" />
+        <option value="$PROJECT_DIR$/visdial-pytorch1/options_dialog.py" />
+        <option value="$PROJECT_DIR$/visdial-pytorch1/dataloader_09.py" />
+        <option value="$PROJECT_DIR$/visdial-pytorch1/debug_train.py" />
+        <option value="$PROJECT_DIR$/visdial-pytorch1/debug_train_output.py" />
+        <option value="$PROJECT_DIR$/visdial-pytorch1/dataloader_output.py" />
+        <option value="$PROJECT_DIR$/visdial-pytorch1/test.py" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="y" value="23" />
+    <option name="width" value="720" />
+    <option name="height" value="877" />
+  </component>
+  <component name="ProjectId" id="1QbVuQ9QQZeWeHurEGkUMiUheQR" />
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="cvpr_2020" type="b2602c69:ProjectViewProjectNode" />
+              <item name="cvpr_2020" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ToolWindowSciView.ShowToolbar" value="false" />
+    <property name="WebServerToolWindowFactoryState" value="true" />
+    <property name="WebServerToolWindowPanel.toolwindow.highlight.mappings" value="true" />
+    <property name="WebServerToolWindowPanel.toolwindow.highlight.symlinks" value="true" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.date" value="false" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.permissions" value="false" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.size" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/visdial-pytorch1/rva" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="restartRequiresConfirmation" value="false" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/visdial-pytorch1/visdial/models" />
+      <recent name="$PROJECT_DIR$/visdial-pytorch1/rva" />
+      <recent name="$PROJECT_DIR$/visdial-pytorch1/ban" />
+      <recent name="$PROJECT_DIR$/visdial-pytorch" />
+      <recent name="$PROJECT_DIR$/aqm_plus" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/visdial-pytorch1/rva" />
+      <recent name="$PROJECT_DIR$/visdial-pytorch1" />
+      <recent name="$PROJECT_DIR$/ban" />
+      <recent name="$PROJECT_DIR$/visdial-pytorch1/ban" />
+      <recent name="$PROJECT_DIR$/aqm_plus" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Python.test (1)">
+    <configuration name="dataloader_09" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="cvpr_2020" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/visdial-pytorch1" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/visdial-pytorch1/dataloader_09.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="dataloader_output" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="cvpr_2020" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/visdial-pytorch1" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/visdial-pytorch1/dataloader_output.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="debug_train" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="cvpr_2020" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/visdial-pytorch1" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/visdial-pytorch1/debug_train.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="debug_train_output" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="cvpr_2020" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/visdial-pytorch1" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/visdial-pytorch1/debug_train_output.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="debug_train_top_down" type="PythonConfigurationType" factoryName="Python">
+      <module name="cvpr_2020" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+        <env name="CUDA_VISIBLE_DEVICES" value="5" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/visdial-pytorch1" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/visdial-pytorch1/debug_train_top_down.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="test (1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="cvpr_2020" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/visdial-pytorch1" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/visdial-pytorch1/test.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Python.debug_train_top_down" />
+      <item itemvalue="Python.debug_train" />
+      <item itemvalue="Python.test (1)" />
+      <item itemvalue="Python.dataloader_09" />
+      <item itemvalue="Python.dataloader_output" />
+      <item itemvalue="Python.debug_train_output" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.test (1)" />
+        <item itemvalue="Python.debug_train_output" />
+        <item itemvalue="Python.debug_train" />
+        <item itemvalue="Python.dataloader_output" />
+        <item itemvalue="Python.dataloader_09" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="8a95359a-eb6e-41c4-8192-ce59869dc556" name="Default Changelist" comment="" />
+      <created>1566267445820</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1566267445820</updated>
+      <workItem from="1566267448952" duration="558000" />
+      <workItem from="1566268024143" duration="1461000" />
+      <workItem from="1566277177209" duration="594000" />
+      <workItem from="1566283456018" duration="638000" />
+      <workItem from="1566284105266" duration="149000" />
+      <workItem from="1566284341173" duration="32696000" />
+      <workItem from="1566458833549" duration="234000" />
+      <workItem from="1566460304723" duration="36843000" />
+      <workItem from="1566781156352" duration="12983000" />
+      <workItem from="1566955324358" duration="29283000" />
+      <workItem from="1567494691340" duration="22355000" />
+      <workItem from="1567648124042" duration="1037000" />
+      <workItem from="1567659521170" duration="11350000" />
+      <workItem from="1567732370912" duration="10425000" />
+      <workItem from="1567994066584" duration="24000" />
+      <workItem from="1567994114215" duration="6961000" />
+      <workItem from="1568039510897" duration="1134000" />
+      <workItem from="1568040803023" duration="1136000" />
+      <workItem from="1568097878715" duration="233000" />
+      <workItem from="1568098133730" duration="1311000" />
+      <workItem from="1568099808750" duration="64463000" />
+      <workItem from="1569145281363" duration="6667000" />
+      <workItem from="1569159421663" duration="1342000" />
+      <workItem from="1569160786937" duration="1914000" />
+      <workItem from="1569204432619" duration="25894000" />
+      <workItem from="1569328477104" duration="4000" />
+      <workItem from="1569376909943" duration="37274000" />
+      <workItem from="1570514366063" duration="9205000" />
+      <workItem from="1570633557151" duration="3000" />
+      <workItem from="1570671566374" duration="32699000" />
+      <workItem from="1572224877077" duration="130951000" />
+      <workItem from="1572844684399" duration="52541000" />
+      <workItem from="1573089489659" duration="14534000" />
+      <workItem from="1573112840626" duration="32054000" />
+      <workItem from="1573218065803" duration="13884000" />
+      <workItem from="1573388170748" duration="6720000" />
+      <workItem from="1573400172104" duration="7011000" />
+      <workItem from="1573440015976" duration="15243000" />
+      <workItem from="1573481576166" duration="222000" />
+      <workItem from="1573522095459" duration="2192000" />
+      <workItem from="1573540654440" duration="4580000" />
+      <workItem from="1573610263173" duration="566000" />
+      <workItem from="1573614453523" duration="9000" />
+      <workItem from="1574042607622" duration="1076000" />
+      <workItem from="1574645369769" duration="735000" />
+      <workItem from="1574825951247" duration="458000" />
+      <workItem from="1576202264946" duration="10223000" />
+      <workItem from="1576221552079" duration="2008000" />
+      <workItem from="1576463416470" duration="234000" />
+      <workItem from="1579089436930" duration="922000" />
+      <workItem from="1579094690128" duration="909000" />
+      <workItem from="1584338909094" duration="41000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="476578000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="0" y="23" width="1440" height="877" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info id="Favorites" order="0" show_stripe_button="false" side_tool="true" />
+      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.19957082" />
+      <window_info id="Structure" order="2" show_stripe_button="false" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Docker" order="0" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Database Changes" order="1" />
+      <window_info anchor="bottom" id="Version Control" order="2" />
+      <window_info anchor="bottom" id="Event Log" order="3" side_tool="true" weight="0.3299363" />
+      <window_info anchor="bottom" id="Message" order="4" />
+      <window_info anchor="bottom" id="Find" order="5" weight="0.3299363" />
+      <window_info anchor="bottom" id="Cvs" order="6" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="7" weight="0.4" />
+      <window_info anchor="right" id="Remote Host" order="0" weight="0.21816881" />
+      <window_info anchor="right" id="SciView" order="1" weight="0.23676682" />
+      <window_info anchor="right" id="Database" order="2" show_stripe_button="false" weight="0.3297568" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="3" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="4" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="5" weight="0.25" />
+      <window_info anchor="right" id="File Transfer" order="6" weight="0.13304721" />
+      <window_info anchor="right" id="Run" order="7" weight="0.20028612" />
+      <window_info anchor="right" id="Python Console" order="8" show_stripe_button="false" weight="0.3297568" />
+      <window_info anchor="right" id="TODO" order="9" show_stripe_button="false" weight="0.3295964" />
+      <window_info anchor="right" id="Terminal" order="10" show_stripe_button="false" weight="0.3297568" />
+      <window_info anchor="right" id="Debug" order="11" weight="0.20886981" />
+      <window_info anchor="right" id="LuaJ" order="12" show_stripe_button="false" weight="0.3297568" />
+    </layout>
+    <layout-to-restore>
+      <window_info id="Favorites" order="0" show_stripe_button="false" side_tool="true" />
+      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.16809729" />
+      <window_info id="Structure" order="2" show_stripe_button="false" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Docker" order="0" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Database Changes" order="1" />
+      <window_info anchor="bottom" id="Version Control" order="2" />
+      <window_info anchor="bottom" id="Event Log" order="3" side_tool="true" weight="0.3299363" />
+      <window_info anchor="bottom" id="Message" order="4" />
+      <window_info anchor="bottom" id="Find" order="5" weight="0.3299363" />
+      <window_info anchor="bottom" id="Cvs" order="6" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="7" weight="0.4" />
+      <window_info anchor="right" id="Remote Host" order="0" weight="0.21816881" />
+      <window_info anchor="right" id="SciView" order="1" weight="0.23676682" />
+      <window_info anchor="right" id="Database" order="2" show_stripe_button="false" weight="0.3297568" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="3" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="4" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="5" weight="0.25" />
+      <window_info anchor="right" id="File Transfer" order="6" weight="0.13304721" />
+      <window_info anchor="right" id="Run" order="7" weight="0.20028612" />
+      <window_info anchor="right" id="Python Console" order="8" show_stripe_button="false" weight="0.3297568" />
+      <window_info anchor="right" id="TODO" order="9" show_stripe_button="false" weight="0.3295964" />
+      <window_info anchor="right" id="Terminal" order="10" show_stripe_button="false" weight="0.3297568" />
+      <window_info anchor="right" id="Debug" order="11" weight="0.20886981" />
+      <window_info anchor="right" id="LuaJ" order="12" show_stripe_button="false" weight="0.3297568" />
+    </layout-to-restore>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="UnknownFeatures">
+    <option featureType="com.intellij.fileTypeFactory" implementationName="*.lua" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/visualdialog-pytorch/main.py</url>
+          <line>110</line>
+          <option name="timeStamp" value="731" />
+        </line-breakpoint>
+        <line-breakpoint suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/visualdialog-pytorch/main.py</url>
+          <line>536</line>
+          <option name="timeStamp" value="741" />
+        </line-breakpoint>
+        <line-breakpoint suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/visualdialog-pytorch/main.py</url>
+          <line>118</line>
+          <option name="timeStamp" value="748" />
+        </line-breakpoint>
+        <line-breakpoint suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/visualdialog-pytorch/main.py</url>
+          <line>121</line>
+          <option name="timeStamp" value="751" />
+        </line-breakpoint>
+        <line-breakpoint suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/visualdialog-pytorch/networks/model.py</url>
+          <line>43</line>
+          <option name="timeStamp" value="752" />
+        </line-breakpoint>
+        <line-breakpoint suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/visualdialog-pytorch/networks/model.py</url>
+          <line>45</line>
+          <option name="timeStamp" value="753" />
+        </line-breakpoint>
+        <line-breakpoint suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/visualdialog-pytorch/networks/model.py</url>
+          <line>47</line>
+          <option name="timeStamp" value="754" />
+        </line-breakpoint>
+        <line-breakpoint suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/visualdialog-pytorch/networks/model.py</url>
+          <line>49</line>
+          <option name="timeStamp" value="755" />
+        </line-breakpoint>
+        <line-breakpoint suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/visualdialog-pytorch/main.py</url>
+          <line>123</line>
+          <option name="timeStamp" value="756" />
+        </line-breakpoint>
+        <line-breakpoint suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/visualdialog-pytorch/networks/netG.py</url>
+          <line>27</line>
+          <option name="timeStamp" value="758" />
+        </line-breakpoint>
+        <line-breakpoint suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/visualdialog-pytorch/networks/netG.py</url>
+          <line>28</line>
+          <option name="timeStamp" value="759" />
+        </line-breakpoint>
+        <line-breakpoint suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/visualdialog-pytorch/main.py</url>
+          <line>112</line>
+          <option name="timeStamp" value="760" />
+        </line-breakpoint>
+        <line-breakpoint suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/visualdialog-pytorch/networks/netG.py</url>
+          <line>29</line>
+          <option name="timeStamp" value="761" />
+        </line-breakpoint>
+        <line-breakpoint suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/visualdialog-pytorch/networks/netG.py</url>
+          <line>30</line>
+          <option name="timeStamp" value="762" />
+        </line-breakpoint>
+        <line-breakpoint suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/visualdialog-pytorch/networks/netG.py</url>
+          <line>32</line>
+          <option name="timeStamp" value="763" />
+        </line-breakpoint>
+        <line-breakpoint suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/visdial-pytorch/visdial/models/encoders/hre_MN3.py</url>
+          <line>277</line>
+          <option name="timeStamp" value="766" />
+        </line-breakpoint>
+        <line-breakpoint suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/visdial-pytorch/visdial/models/encoders/hre_MN3.py</url>
+          <line>278</line>
+          <option name="timeStamp" value="767" />
+        </line-breakpoint>
+        <line-breakpoint suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/visdial-pytorch/visdial/models/encoders/hre_MN3.py</url>
+          <line>347</line>
+          <option name="timeStamp" value="768" />
+        </line-breakpoint>
+        <line-breakpoint suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/visdial-pytorch/visdial/models/encoders/hre_MN3.py</url>
+          <line>376</line>
+          <option name="timeStamp" value="769" />
+        </line-breakpoint>
+        <line-breakpoint suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/visdial-pytorch/visdial/models/encoders/hre_MN3.py</url>
+          <line>247</line>
+          <option name="timeStamp" value="770" />
+        </line-breakpoint>
+        <line-breakpoint suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/visdial-pytorch/visdial/models/encoders/hre_MN3.py</url>
+          <line>246</line>
+          <option name="timeStamp" value="771" />
+        </line-breakpoint>
+        <line-breakpoint suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/visualdialog-pytorch/main.py</url>
+          <line>103</line>
+          <option name="timeStamp" value="772" />
+        </line-breakpoint>
+        <line-breakpoint suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/visdial-pytorch/debug_train_cosine.py</url>
+          <line>226</line>
+          <option name="timeStamp" value="779" />
+        </line-breakpoint>
+        <line-breakpoint suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/visualdialog-pytorch/networks/encoder_QBot.py</url>
+          <line>53</line>
+          <option name="timeStamp" value="898" />
+        </line-breakpoint>
+        <line-breakpoint suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/visdial-pytorch/eval_utils/rank_questioner.py</url>
+          <line>39</line>
+          <option name="timeStamp" value="928" />
+        </line-breakpoint>
+        <line-breakpoint suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/visdial-pytorch/eval_utils/rank_questioner.py</url>
+          <line>40</line>
+          <option name="timeStamp" value="929" />
+        </line-breakpoint>
+        <line-breakpoint suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/visdial-pytorch/eval_utils/rank_questioner.py</url>
+          <line>49</line>
+          <option name="timeStamp" value="930" />
+        </line-breakpoint>
+        <line-breakpoint suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/visdial-pytorch/eval_utils/rank_questioner.py</url>
+          <line>57</line>
+          <option name="timeStamp" value="931" />
+        </line-breakpoint>
+        <line-breakpoint suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/visdial-pytorch/eval_utils/rank_questioner.py</url>
+          <line>42</line>
+          <option name="timeStamp" value="942" />
+        </line-breakpoint>
+        <line-breakpoint suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/visdial-pytorch/evaluate_print.py</url>
+          <line>44</line>
+          <option name="timeStamp" value="963" />
+        </line-breakpoint>
+        <line-breakpoint suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/visdial-pytorch/dataloader.py</url>
+          <line>121</line>
+          <option name="timeStamp" value="964" />
+        </line-breakpoint>
+        <line-breakpoint suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/visdial-pytorch/dataloader.py</url>
+          <line>122</line>
+          <option name="timeStamp" value="965" />
+        </line-breakpoint>
+        <line-breakpoint suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/visdial-pytorch/debug_train_cosine_1.py</url>
+          <line>262</line>
+          <option name="timeStamp" value="991" />
+        </line-breakpoint>
+        <line-breakpoint suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/visdial-pytorch/debug_train_cosine_1.py</url>
+          <line>264</line>
+          <option name="timeStamp" value="993" />
+        </line-breakpoint>
+        <line-breakpoint suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/visdial-pytorch/debug_train_cosine_1.py</url>
+          <line>272</line>
+          <option name="timeStamp" value="994" />
+        </line-breakpoint>
+        <line-breakpoint suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/visdial-pytorch/debug_train_cosine_1.py</url>
+          <line>261</line>
+          <option name="timeStamp" value="998" />
+        </line-breakpoint>
+        <line-breakpoint suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/visdial-pytorch/debug_train_cosine_1.py</url>
+          <line>252</line>
+          <option name="timeStamp" value="999" />
+        </line-breakpoint>
+        <line-breakpoint suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/visdial-pytorch/debug_train_cosine_1.py</url>
+          <line>254</line>
+          <option name="timeStamp" value="1001" />
+        </line-breakpoint>
+        <line-breakpoint suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/visdial-pytorch/utils/utilities.py</url>
+          <line>348</line>
+          <option name="timeStamp" value="1005" />
+        </line-breakpoint>
+        <line-breakpoint suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/visdial-pytorch/utils/utilities.py</url>
+          <line>347</line>
+          <option name="timeStamp" value="1006" />
+        </line-breakpoint>
+        <line-breakpoint suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/visdial-pytorch/visdial/models/encoders/hre_MN5.py</url>
+          <line>317</line>
+          <option name="timeStamp" value="1007" />
+        </line-breakpoint>
+        <line-breakpoint suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/visdial-pytorch/visdial/models/encoders/hre_MN5.py</url>
+          <line>285</line>
+          <option name="timeStamp" value="1008" />
+        </line-breakpoint>
+        <line-breakpoint suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/visdial-pytorch/visdial/models/encoders/hre_MN5.py</url>
+          <line>296</line>
+          <option name="timeStamp" value="1009" />
+        </line-breakpoint>
+        <line-breakpoint suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/visdial-pytorch/visdial/models/encoders/hre_MN5.py</url>
+          <line>302</line>
+          <option name="timeStamp" value="1010" />
+        </line-breakpoint>
+        <line-breakpoint suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/visdial-pytorch/visdial/models/encoders/hre_MN5.py</url>
+          <line>318</line>
+          <option name="timeStamp" value="1011" />
+        </line-breakpoint>
+        <line-breakpoint suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/visdial-pytorch/visdial/models/encoders/hre_MN5.py</url>
+          <line>334</line>
+          <option name="timeStamp" value="1012" />
+        </line-breakpoint>
+        <line-breakpoint suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/visdial-pytorch/visdial/models/encoders/hre_MN4.py</url>
+          <line>85</line>
+          <option name="timeStamp" value="1013" />
+        </line-breakpoint>
+        <line-breakpoint suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/visdial-pytorch/visdial/models/encoders/hre_MN5.py</url>
+          <line>239</line>
+          <option name="timeStamp" value="1016" />
+        </line-breakpoint>
+        <line-breakpoint suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/visdial-pytorch/visdial/models/encoders/hre_MN5.py</url>
+          <line>259</line>
+          <option name="timeStamp" value="1017" />
+        </line-breakpoint>
+        <line-breakpoint suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/visdial-pytorch/visdial/models/encoders/hre_MN5.py</url>
+          <line>214</line>
+          <option name="timeStamp" value="1018" />
+        </line-breakpoint>
+        <line-breakpoint suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/visdial-pytorch/visdial/models/encoders/hre_MN5.py</url>
+          <line>227</line>
+          <option name="timeStamp" value="1019" />
+        </line-breakpoint>
+        <line-breakpoint suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/visdial-pytorch/visdial/models/encoders/hre_MN5.py</url>
+          <line>343</line>
+          <option name="timeStamp" value="1020" />
+        </line-breakpoint>
+        <line-breakpoint suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/visdial-pytorch/visdial/models/encoders/hre_MN5.py</url>
+          <line>339</line>
+          <option name="timeStamp" value="1021" />
+        </line-breakpoint>
+        <line-breakpoint suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/visdial-pytorch/visdial/models/encoders/hre.py</url>
+          <line>343</line>
+          <option name="timeStamp" value="1022" />
+        </line-breakpoint>
+        <line-breakpoint suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/visdial-pytorch/visdial/models/answerer.py</url>
+          <line>72</line>
+          <option name="timeStamp" value="1023" />
+        </line-breakpoint>
+        <line-breakpoint suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/visdial-pytorch/visdial/models/answerer.py</url>
+          <line>79</line>
+          <option name="timeStamp" value="1024" />
+        </line-breakpoint>
+        <line-breakpoint suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/visdial-pytorch/visdial/models/encoders/hre_MN5.py</url>
+          <line>258</line>
+          <option name="timeStamp" value="1025" />
+        </line-breakpoint>
+        <line-breakpoint suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/visdial-pytorch/utils/utilities.py</url>
+          <line>202</line>
+          <option name="timeStamp" value="1026" />
+        </line-breakpoint>
+        <line-breakpoint suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/visdial-pytorch/utils/utilities.py</url>
+          <line>204</line>
+          <option name="timeStamp" value="1038" />
+        </line-breakpoint>
+        <line-breakpoint suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/visdial-pytorch/utils/utilities.py</url>
+          <line>209</line>
+          <option name="timeStamp" value="1039" />
+        </line-breakpoint>
+        <line-breakpoint suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/visdial-pytorch/visdial/models/encoders/hre_MN5.py</url>
+          <line>219</line>
+          <option name="timeStamp" value="1040" />
+        </line-breakpoint>
+        <line-breakpoint suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/visdial-pytorch/visdial/models/encoders/hre_MN5.py</url>
+          <line>220</line>
+          <option name="timeStamp" value="1041" />
+        </line-breakpoint>
+        <line-breakpoint suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/visdial-pytorch1/utils/utilities_questioner_predict.py</url>
+          <line>256</line>
+          <option name="timeStamp" value="1049" />
+        </line-breakpoint>
+        <line-breakpoint suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/visdial-pytorch1/ban/bc.py</url>
+          <line>43</line>
+          <option name="timeStamp" value="1061" />
+        </line-breakpoint>
+        <line-breakpoint suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/visdial-pytorch1/ban/bc.py</url>
+          <line>45</line>
+          <option name="timeStamp" value="1062" />
+        </line-breakpoint>
+        <line-breakpoint suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/visdial-pytorch1/ban/bc.py</url>
+          <line>46</line>
+          <option name="timeStamp" value="1063" />
+        </line-breakpoint>
+        <line-breakpoint suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/visdial-pytorch1/ban/bc.py</url>
+          <line>47</line>
+          <option name="timeStamp" value="1069" />
+        </line-breakpoint>
+        <line-breakpoint suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/visdial-pytorch1/ban/bc.py</url>
+          <line>54</line>
+          <option name="timeStamp" value="1070" />
+        </line-breakpoint>
+        <line-breakpoint suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/visdial-pytorch1/ban/base_model.py</url>
+          <line>47</line>
+          <option name="timeStamp" value="1075" />
+        </line-breakpoint>
+        <line-breakpoint suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/visdial-pytorch1/ban/base_model.py</url>
+          <line>51</line>
+          <option name="timeStamp" value="1076" />
+        </line-breakpoint>
+        <line-breakpoint suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/visdial-pytorch1/ban/base_model.py</url>
+          <line>48</line>
+          <option name="timeStamp" value="1078" />
+        </line-breakpoint>
+        <line-breakpoint suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/visdial-pytorch1/ban/attention.py</url>
+          <line>31</line>
+          <option name="timeStamp" value="1082" />
+        </line-breakpoint>
+        <line-breakpoint suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/visdial-pytorch1/ban/attention.py</url>
+          <line>41</line>
+          <option name="timeStamp" value="1083" />
+        </line-breakpoint>
+        <line-breakpoint suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/visdial-pytorch1/ban/attention.py</url>
+          <line>34</line>
+          <option name="timeStamp" value="1084" />
+        </line-breakpoint>
+        <line-breakpoint suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/visdial-pytorch1/ban/attention.py</url>
+          <line>38</line>
+          <option name="timeStamp" value="1085" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/visdial-pytorch1/ban/base_model.py</url>
+          <line>96</line>
+          <option name="timeStamp" value="1091" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/visdial-pytorch/debug_train_cosine.py</url>
+          <line>184</line>
+          <option name="timeStamp" value="1147" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/visdial-pytorch/debug_train_cosine.py</url>
+          <line>185</line>
+          <option name="timeStamp" value="1148" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/visdial-pytorch1/ban/base_model.py</url>
+          <line>93</line>
+          <option name="timeStamp" value="1186" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/visdial-pytorch1/ban/base_model.py</url>
+          <line>92</line>
+          <option name="timeStamp" value="1187" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/visdial-pytorch1/ban/read.py</url>
+          <line>242</line>
+          <option name="timeStamp" value="1217" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/rva/visdialch/encoders/rva.py</url>
+          <line>79</line>
+          <option name="timeStamp" value="1283" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/rva/visdialch/encoders/rva.py</url>
+          <line>91</line>
+          <option name="timeStamp" value="1284" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/rva/visdialch/encoders/rva.py</url>
+          <line>109</line>
+          <option name="timeStamp" value="1286" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/rva/visdialch/encoders/rva.py</url>
+          <line>96</line>
+          <option name="timeStamp" value="1287" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/rva/visdialch/encoders/rva.py</url>
+          <line>93</line>
+          <option name="timeStamp" value="1288" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/rva/visdialch/encoders/rva.py</url>
+          <line>86</line>
+          <option name="timeStamp" value="1289" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/rva/visdialch/encoders/modules.py</url>
+          <line>220</line>
+          <option name="timeStamp" value="1290" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/rva/visdialch/encoders/modules.py</url>
+          <line>246</line>
+          <option name="timeStamp" value="1291" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/rva/train.py</url>
+          <line>176</line>
+          <option name="timeStamp" value="1295" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/rva/train.py</url>
+          <line>163</line>
+          <option name="timeStamp" value="1297" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/rva/train.py</url>
+          <line>162</line>
+          <option name="timeStamp" value="1298" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/rva/visdialch/encoders/modules.py</url>
+          <line>5</line>
+          <option name="timeStamp" value="1299" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/visdial-pytorch1/visdial/models/answerer_top_down.py</url>
+          <line>113</line>
+          <option name="timeStamp" value="1372" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/aqm_plus/eval_utils/rank_answerer.py</url>
+          <line>109</line>
+          <option name="timeStamp" value="1374" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/visdial-pytorch1/eval_utils/dialog_generate.py</url>
+          <line>65</line>
+          <option name="timeStamp" value="1500" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/visdial-pytorch1/eval_utils/dialog_generate.py</url>
+          <line>66</line>
+          <option name="timeStamp" value="1501" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/visdial-pytorch1/evaluate_dialog.py</url>
+          <line>138</line>
+          <option name="timeStamp" value="1502" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/visdial-pytorch/debug_train_diversity.py</url>
+          <line>256</line>
+          <option name="timeStamp" value="1514" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/visdial-pytorch1/visdial/models/encoders/hre_MN8.py</url>
+          <line>236</line>
+          <option name="timeStamp" value="1517" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/visdial-pytorch1/visdial/models/encoders/hre_MN8.py</url>
+          <line>243</line>
+          <option name="timeStamp" value="1518" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/visdial-pytorch1/visdial/models/encoders/hre_MN8.py</url>
+          <line>244</line>
+          <option name="timeStamp" value="1519" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/visdial-pytorch1/visdial/models/encoders/hre_MN8.py</url>
+          <line>305</line>
+          <option name="timeStamp" value="1520" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/visdial-pytorch1/debug_train.py</url>
+          <line>148</line>
+          <option name="timeStamp" value="1532" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/visdial-pytorch1/debug_train.py</url>
+          <line>38</line>
+          <option name="timeStamp" value="1536" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/visdial-pytorch1/dataloader_09.py</url>
+          <line>64</line>
+          <option name="timeStamp" value="1540" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/visdial-pytorch1/dataloader_09.py</url>
+          <line>69</line>
+          <option name="timeStamp" value="1541" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/visdial-pytorch1/dataloader_09.py</url>
+          <line>72</line>
+          <option name="timeStamp" value="1542" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/visdial-pytorch1/debug_train.py</url>
+          <line>39</line>
+          <option name="timeStamp" value="1547" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/visdial-pytorch1/debug_train.py</url>
+          <line>40</line>
+          <option name="timeStamp" value="1548" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/visdial-pytorch1/dataloader_09.py</url>
+          <line>89</line>
+          <option name="timeStamp" value="1549" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/visdial-pytorch1/dataloader_09.py</url>
+          <line>102</line>
+          <option name="timeStamp" value="1552" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/visdial-pytorch1/dataloader_09.py</url>
+          <line>103</line>
+          <option name="timeStamp" value="1553" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/visdial-pytorch1/test.py</url>
+          <line>13</line>
+          <option name="timeStamp" value="1593" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/visdial-pytorch1/test.py</url>
+          <line>10</line>
+          <option name="timeStamp" value="1595" />
+        </line-breakpoint>
+      </breakpoints>
+      <default-breakpoints>
+        <breakpoint type="python-exception">
+          <properties notifyOnTerminate="true" exception="BaseException">
+            <option name="notifyOnTerminate" value="true" />
+          </properties>
+        </breakpoint>
+      </default-breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/cvpr_2020$evaluate.coverage" NAME="evaluate Coverage Results" MODIFIED="1568255669520" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/aqm_plus" />
+    <SUITE FILE_PATH="coverage/cvpr_2020$hre_MN.coverage" NAME="hre_MN Coverage Results" MODIFIED="1567671946539" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/visdial-pytorch/visdial/models/encoders" />
+    <SUITE FILE_PATH="coverage/cvpr_2020$debug_train.coverage" NAME="debug_train Coverage Results" MODIFIED="1576218994575" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/visdial-pytorch1" />
+    <SUITE FILE_PATH="coverage/cvpr_2020$debug_train1.coverage" NAME="debug_train1 Coverage Results" MODIFIED="1573464101152" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/visdial-pytorch" />
+    <SUITE FILE_PATH="coverage/cvpr_2020$evaluate_print.coverage" NAME="evaluate_print Coverage Results" MODIFIED="1573401082496" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/visdial-pytorch1" />
+    <SUITE FILE_PATH="coverage/cvpr_2020$base_model.coverage" NAME="base_model Coverage Results" MODIFIED="1572852019690" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/visdial-pytorch1/ban" />
+    <SUITE FILE_PATH="coverage/cvpr_2020$train__1_.coverage" NAME="train (1) Coverage Results" MODIFIED="1568211911719" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/aqm_plus" />
+    <SUITE FILE_PATH="coverage/cvpr_2020$read.coverage" NAME="read Coverage Results" MODIFIED="1573223257260" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/visdial-pytorch1/ban" />
+    <SUITE FILE_PATH="coverage/cvpr_2020$debug_train_top_down.coverage" NAME="debug_train_top_down Coverage Results" MODIFIED="1573141311776" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/visdial-pytorch1" />
+    <SUITE FILE_PATH="coverage/cvpr_2020$debug_train_top_down2.coverage" NAME="debug_train_top_down2 Coverage Results" MODIFIED="1573202919161" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/visdial-pytorch1" />
+    <SUITE FILE_PATH="coverage/cvpr_2020$evaluate_dialog.coverage" NAME="evaluate_dialog Coverage Results" MODIFIED="1574043631078" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/visdial-pytorch1" />
+    <SUITE FILE_PATH="coverage/cvpr_2020$debug_train__1_.coverage" NAME="debug_train (1) Coverage Results" MODIFIED="1573463118706" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/visdial-pytorch" />
+    <SUITE FILE_PATH="coverage/cvpr_2020$debug_train_output.coverage" NAME="debug_train_output Coverage Results" MODIFIED="1576219756365" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/visdial-pytorch1" />
+    <SUITE FILE_PATH="coverage/cvpr_2020$evaluate1.coverage" NAME="evaluate1 Coverage Results" MODIFIED="1568634573437" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/visdial-pytorch" />
+    <SUITE FILE_PATH="coverage/cvpr_2020$train.coverage" NAME="train Coverage Results" MODIFIED="1568120108231" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/MemN2N_pytorch/memn2n" />
+    <SUITE FILE_PATH="coverage/cvpr_2020$dataloader_top_down.coverage" NAME="dataloader_top_down Coverage Results" MODIFIED="1573116643354" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/visdial-pytorch1" />
+    <SUITE FILE_PATH="coverage/cvpr_2020$questioner.coverage" NAME="questioner Coverage Results" MODIFIED="1569552497915" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/visdial-pytorch/visdial/models" />
+    <SUITE FILE_PATH="coverage/cvpr_2020$test.coverage" NAME="test Coverage Results" MODIFIED="1573455739352" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/visdial-pytorch" />
+    <SUITE FILE_PATH="coverage/cvpr_2020$evaluate_print1.coverage" NAME="evaluate_print1 Coverage Results" MODIFIED="1573392848216" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/visdial-pytorch1" />
+    <SUITE FILE_PATH="coverage/cvpr_2020$debug_train_diversity.coverage" NAME="debug_train_diversity Coverage Results" MODIFIED="1573456666488" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/visdial-pytorch" />
+    <SUITE FILE_PATH="coverage/cvpr_2020$bc.coverage" NAME="bc Coverage Results" MODIFIED="1572529799343" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/visdial-pytorch1/ban" />
+    <SUITE FILE_PATH="coverage/cvpr_2020$debug_train_cosine_1.coverage" NAME="debug_train_cosine_1 Coverage Results" MODIFIED="1572418384534" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/visdial-pytorch" />
+    <SUITE FILE_PATH="coverage/cvpr_2020$dataloader_output.coverage" NAME="dataloader_output Coverage Results" MODIFIED="1576208146534" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/visdial-pytorch1" />
+    <SUITE FILE_PATH="coverage/cvpr_2020$debug_train_top_down1.coverage" NAME="debug_train_top_down1 Coverage Results" MODIFIED="1573179750612" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/visdial-pytorch1" />
+    <SUITE FILE_PATH="coverage/cvpr_2020$debug_train_cosine.coverage" NAME="debug_train_cosine Coverage Results" MODIFIED="1572834522192" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/visdial-pytorch" />
+    <SUITE FILE_PATH="coverage/cvpr_2020$hre_MN6.coverage" NAME="hre_MN6 Coverage Results" MODIFIED="1572852253304" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/visdial-pytorch1/visdial/models/encoders" />
+    <SUITE FILE_PATH="coverage/cvpr_2020$evaluate__1_.coverage" NAME="evaluate (1) Coverage Results" MODIFIED="1568252637228" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/visdial-pytorch" />
+    <SUITE FILE_PATH="coverage/cvpr_2020$main.coverage" NAME="main Coverage Results" MODIFIED="1569379119442" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/visualdialog-pytorch" />
+    <SUITE FILE_PATH="coverage/cvpr_2020$fc.coverage" NAME="fc Coverage Results" MODIFIED="1572485514619" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/visdial-pytorch1/ban" />
+    <SUITE FILE_PATH="coverage/cvpr_2020$test__1_.coverage" NAME="test (1) Coverage Results" MODIFIED="1579097165629" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/visdial-pytorch1" />
+    <SUITE FILE_PATH="coverage/cvpr_2020$dataloader_top_down1.coverage" NAME="dataloader_top_down1 Coverage Results" MODIFIED="1573137458529" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/visdial-pytorch1" />
+  </component>
+  <component name="debuggerHistoryManager">
+    <expressions id="evaluateCodeFragment">
+      <expression>
+        <expression-string>260525 in list</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>26025 in list</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>self.mem_n2n(story, query)[0]</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
+      </expression>
+    </expressions>
+    <expressions id="evaluateExpression">
+      <expression>
+        <expression-string>load_dict</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>load_dict['data']['']</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>load_dict['data']</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>98721 in list</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>401244 in list</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>0401244 in list</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>list</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>12014 in list</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>load_dict['data'][0]['image_id']</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+    </expressions>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/visdial-pytorch1/options.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="80" column="35" selection-start-line="80" selection-start-column="26" selection-end-line="80" selection-end-column="35" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/visdial-pytorch1/rva/Q_ATT.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="222">
+          <caret line="27" column="2" lean-forward="true" selection-start-line="27" selection-start-column="2" selection-end-line="27" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/visdial-pytorch1/visdial/models/encoders/hre_MN6.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="249">
+          <caret line="232" column="37" selection-start-line="232" selection-start-column="37" selection-end-line="232" selection-end-column="37" />
+          <folding>
+            <element signature="e#0#12#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ban/base_model.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/visdial-pytorch/test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="15" selection-start-column="15" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/visdial-pytorch/debug_train_diversity.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1878">
+          <caret line="269" column="57" lean-forward="true" selection-start-line="269" selection-start-column="57" selection-end-line="269" selection-end-column="57" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/visdial-pytorch1/dataloader_top_down.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="365" column="44" lean-forward="true" selection-end-line="413" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/visdial-pytorch1/dataloader_top_down1.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/visdial-pytorch1/rva/RVA.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-206">
+          <caret line="10" column="8" selection-start-line="10" selection-start-column="8" selection-end-line="10" selection-end-column="8" />
+          <folding>
+            <element signature="e#0#12#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/visdial-pytorch/visdial/models/questioner.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#12#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/visdial-pytorch/debug_options.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="11">
+          <caret line="69" column="62" lean-forward="true" selection-start-line="69" selection-start-column="62" selection-end-line="69" selection-end-column="62" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/visdial-pytorch/visdial/models/decoders/gen1.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="675">
+          <caret line="67" selection-start-line="67" selection-end-line="67" />
+          <folding>
+            <element signature="e#0#12#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/visdial-pytorch/dataloader_vgg_mean_global.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="263">
+          <caret line="112" selection-start-line="112" selection-end-line="112" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/visdial-pytorch/debug_train1.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="236">
+          <caret line="188" column="34" selection-start-line="188" selection-start-column="28" selection-end-line="188" selection-end-column="35" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/visdial-pytorch/eval_utils/rank_answerer.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="247">
+          <caret line="84" column="40" selection-start-line="84" selection-start-column="40" selection-end-line="84" selection-end-column="40" />
+          <folding>
+            <element signature="e#0#10#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/visdial-pytorch1/visdial/models/encoders/hre_MN8.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="173">
+          <caret line="36" column="31" lean-forward="true" selection-start-line="36" selection-start-column="31" selection-end-line="36" selection-end-column="31" />
+          <folding>
+            <element signature="e#0#12#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/visdial-pytorch1/debug_options.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="236">
+          <caret line="82" column="58" selection-start-line="82" selection-start-column="58" selection-end-line="82" selection-end-column="58" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/visdial-pytorch1/dataloader_top_down2.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="633">
+          <caret line="373" selection-start-line="373" selection-end-line="373" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/visdial-pytorch1/eval_utils/rank_questioner.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="603">
+          <caret line="154" column="23" selection-start-line="154" selection-start-column="23" selection-end-line="154" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/visdial-pytorch1/evaluate_print1.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1145">
+          <caret line="25" selection-start-line="25" selection-end-line="25" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/visdial-pytorch/utils/visualize.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#21#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/visdial-pytorch/dataloader_09.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4139">
+          <caret line="369" column="33" selection-start-line="369" selection-start-column="33" selection-end-line="369" selection-end-column="33" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/visdial-pytorch/dataloader_vgg_mean.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="580">
+          <caret line="371" column="41" selection-start-line="371" selection-start-column="37" selection-end-line="371" selection-end-column="41" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/visdial-pytorch/eval_utils/rank_answerer1.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1275">
+          <caret line="85" column="78" selection-start-line="85" selection-start-column="78" selection-end-line="85" selection-end-column="78" />
+          <folding>
+            <element signature="e#0#10#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/visdial-pytorch/visdial/models/encoders/hre_MN6.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1065">
+          <caret line="71" column="68" selection-start-line="71" selection-start-column="65" selection-end-line="71" selection-end-column="68" />
+          <folding>
+            <element signature="e#0#12#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/visdial-pytorch/visdial/models/encoders/hre_MN5.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="236">
+          <caret line="166" column="12" selection-start-line="166" selection-start-column="12" selection-end-line="166" selection-end-column="12" />
+          <folding>
+            <element signature="e#0#12#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/visdial-pytorch/debug_train.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="27" column="24" selection-start-line="27" selection-start-column="24" selection-end-line="27" selection-end-column="24" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/visdial-pytorch/evaluate_print.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-543">
+          <caret line="70" column="39" selection-start-line="70" selection-start-column="39" selection-end-line="70" selection-end-column="39" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/visdial-pytorch/utils/utilities_questioner_predict.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1455">
+          <caret line="97" column="21" selection-start-line="97" selection-start-column="21" selection-end-line="97" selection-end-column="21" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/visdial-pytorch/visdial/models/answerer_predict.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
+          <folding>
+            <element signature="e#0#12#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/visdial-pytorch/visdial/models/questioner_predict.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-642">
+          <caret line="6" column="31" selection-start-line="6" selection-start-column="31" selection-end-line="6" selection-end-column="31" />
+          <folding>
+            <element signature="e#0#12#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/visdial-pytorch/visdial/models/encoders/hre_MN4.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="236">
+          <caret line="76" column="23" selection-start-line="76" selection-start-column="17" selection-end-line="76" selection-end-column="23" />
+          <folding>
+            <element signature="e#0#12#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/visdial-pytorch1/evaluate_print.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="18" column="25" selection-start-line="18" selection-start-column="25" selection-end-line="18" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/visdial-pytorch1/visdial/models/questioner_predict.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="36" lean-forward="true" selection-start-line="3" selection-start-column="36" selection-end-line="3" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/visdial-pytorch1/visdial/models/encoders/hre_MN4.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="267">
+          <caret line="37" column="34" lean-forward="true" selection-start-line="37" selection-start-column="34" selection-end-line="37" selection-end-column="34" />
+          <folding>
+            <element signature="e#0#12#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/visdial-pytorch1/visdial/models/encoders/hre_MN5.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="378">
+          <caret line="37" column="31" lean-forward="true" selection-start-line="37" selection-start-column="31" selection-end-line="37" selection-end-column="31" />
+          <folding>
+            <element signature="e#0#12#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/visdial-pytorch1/evaluate_dialog.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="18" column="25" selection-start-line="18" selection-start-column="25" selection-end-line="18" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/visdial-pytorch1/options_dialog.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1950">
+          <caret line="134" column="34" selection-start-line="134" selection-start-column="26" selection-end-line="134" selection-end-column="34" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/visdial-pytorch1/utils/utilities_questioner_predict.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1845">
+          <caret line="132" column="34" selection-start-line="132" selection-start-column="34" selection-end-line="132" selection-end-column="34" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/visdial-pytorch1/visdial/models/answerer_predict.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="34" selection-start-line="4" selection-start-column="34" selection-end-line="4" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/visdial-pytorch1/visdial/models/decoders/top_down2.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-46">
+          <folding>
+            <element signature="e#0#12#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/visdial-pytorch1/visdial/models/decoders/gen1.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" column="7" selection-start-line="17" selection-start-column="7" selection-end-line="17" selection-end-column="7" />
+          <folding>
+            <element signature="e#0#12#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/visdial-pytorch1/visdial/models/answerer_top_down2.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#12#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/visdial-pytorch1/dataloader_09.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="98" column="48" selection-start-line="98" selection-start-column="48" selection-end-line="98" selection-end-column="48" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Library/Caches/PyCharm2019.1/remote_sources/-452171679/-521900957/codecs.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2">
+          <caret line="291" selection-start-line="291" selection-end-line="291" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Library/Caches/PyCharm2019.1/remote_sources/-452171679/-521900957/json/__init__.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/visdial-pytorch1/debug_train_cosine.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/visdial-pytorch1/debug_train.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="304">
+          <caret line="21" column="23" lean-forward="true" selection-start-line="21" selection-start-column="23" selection-end-line="21" selection-end-column="23" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/visdial-pytorch1/dataloader_output.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1500">
+          <caret line="108" column="83" selection-start-line="108" selection-start-column="83" selection-end-line="108" selection-end-column="83" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/visdial-pytorch1/debug_train_output.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="20" column="15" selection-start-line="20" selection-start-column="15" selection-end-line="20" selection-end-column="15" />
+          <folding>
+            <element signature="e#0#13#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/visdial-pytorch1/test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

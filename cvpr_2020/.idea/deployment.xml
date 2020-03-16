@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="PublishConfigData" autoUpload="Always" serverName="lvxinyu@121.48.165.6:12315">
+    <serverData>
+      <paths name="lvxinyu@121.48.165.6:12315">
+        <serverdata>
+          <mappings>
+            <mapping deploy="/home/lvxinyu/code/visdial-pytorch" local="$PROJECT_DIR$/visdial-pytorch" />
+            <mapping deploy="/home/lvxinyu/code/visualdialog-pytorch" local="$PROJECT_DIR$/visualdialog-pytorch" />
+            <mapping deploy="/home/lvxinyu/code/visdial-diversity" local="$PROJECT_DIR$/visdial-diversity" />
+            <mapping deploy="/home/lvxinyu/code/ban-vqa" local="$PROJECT_DIR$/ban" />
+            <mapping deploy="/home/lvxinyu/code/visdial-pytorch1" local="$PROJECT_DIR$/visdial-pytorch1" />
+            <mapping deploy="/home/lvxinyu/code/rva" local="$PROJECT_DIR$/rva" />
+            <mapping deploy="/home/lvxinyu/code/bottom-up-attention" local="$PROJECT_DIR$/bottom-up-attention" />
+            <mapping deploy="/home/lvxinyu/code/bottom-up-attention-vqa" local="$PROJECT_DIR$/bottom-up-attention-vqa" />
+          </mappings>
+        </serverdata>
+      </paths>
+      <paths name="lvxinyu@121.48.165.6:12315 (1)">
+        <serverdata>
+          <mappings>
+            <mapping deploy="/home/lvxinyu/code/visdial-pytorch" local="$PROJECT_DIR$/visdial-pytorch" />
+            <mapping deploy="/home/lvxinyu/code/visualdialog-pytorch" local="$PROJECT_DIR$/visualdialog-pytorch" />
+          </mappings>
+        </serverdata>
+      </paths>
+      <paths name="lvxinyu@121.48.165.6:12315 (2)">
+        <serverdata>
+          <mappings>
+            <mapping deploy="/home/lvxinyu/code/visualdialog-pytorch" local="$PROJECT_DIR$/visualdialog-pytorch" />
+            <mapping deploy="/home/lvxinyu/code/visdial-pytorch" local="$PROJECT_DIR$/visdial-pytorch" />
+          </mappings>
+        </serverdata>
+      </paths>
+      <paths name="lvxinyu@121.48.165.6:12315 (3)">
+        <serverdata>
+          <mappings>
+            <mapping deploy="/home/lvxinyu/code/visdial-pytorch1" local="$PROJECT_DIR$/visdial-pytorch1" />
+            <mapping deploy="/home/lvxinyu/code/visdial-pytorch" local="$PROJECT_DIR$/visdial-pytorch" />
+          </mappings>
+        </serverdata>
+      </paths>
+    </serverData>
+    <option name="myAutoUpload" value="ALWAYS" />
+  </component>
+</project>

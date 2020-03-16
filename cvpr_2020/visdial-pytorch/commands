@@ -1,0 +1,83 @@
+visualdialog-pytorch
+CUDA_VISIBLE_DEVICES=3 python /home/lvxinyu/code/visdial-pytorch/train.py -trainMode sl-qbot
+
+CUDA_VISIBLE_DEVICES=4 python /home/lvxinyu/code/visdial-pytorch/debug_train.py -trainMode sl-qbot
+
+aqm_plus:
+evaluate:
+
+CUDA_VISIBLE_DEVICES=5 python /home/lvxinyu/code/aqm_plus/evaluate.py -evalMode QBotRank -qstartFrom /hhd/lvxinyu/visdial-pytorch/checkpoints/sl_q/qbot_ep_64.vd
+
+CUDA_VISIBLE_DEVICES=5 python /home/lvxinyu/code/aqm_plus/evaluate.py -evalMode QABotsRank -qstartFrom /hhd/lvxinyu/visdial-pytorch/checkpoints/sl_q/qbot_ep_64.vd -startFrom /hhd/lvxinyu/visdial-pytorch/checkpoints/sl_a/abot_sl_ep60.vd
+
+/hhd/lvxinyu/aqm_plus/checkpoints/sl_q_no_delta/qbot_ep_59_q.vd
+/hhd/lvxinyu/aqm_plus/checkpoints/sl_a_no_delta/abot_ep_59.vd
+
+CUDA_VISIBLE_DEVICES=4 python /home/lvxinyu/code/aqm_plus/train.py -useGPU -trainMode rl-full-QAf -startFrom /hhd/lvxinyu/aqm_plus/checkpoints/15-Jul-19-03-21_5339558/abot_ep_59.vd -qstartFrom /hhd/lvxinyu/aqm_plus/checkpoints/18-Jul-19-11-35_9689359/qbot_ep_59_q.vd -CELossCoeff 1 -lrDecayRate 0.999962372474343
+
+CUDA_VISIBLE_DEVICES=3 python /home/lvxinyu/code/aqm_plus/train.py -useGPU -trainMode sl-qbot -numEpochs 60
+
+CUDA_VISIBLE_DEVICES=4 python /home/lvxinyu/code/aqm_plus/train.py -useGPU -trainMode sl-qbot -numEpochs 15 -CELossCoeff 1 -lrDecayRate 0.999962372474343
+
+CUDA_VISIBLE_DEVICES=4 python /home/lvxinyu/code/aqm_plus/train.py -useGPU -trainMode sl-abot -numEpochs 60
+
+CUDA_VISIBLE_DEVICES=4 python /home/lvxinyu/code/aqm_plus/train.py -useGPU -trainMode sl-abot -numEpochs 15 -CELossCoeff 1 -lrDecayRate 0.999962372474343
+
+CUDA_VISIBLE_DEVICES=4 python /home/lvxinyu/code/aqm_plus/train.py -useGPU -trainMode aqmbot-dep -startFrom /home/lvxinyu/code/aqm_plus/checkpoints/abot_trained_60.vd -qstartFrom /home/lvxinyu/code/aqm_plus/checkpoints/qbot_sl_ep60.vd -numEpochs 60
+CUDA_VISIBLE_DEVICES=4 python /home/lvxinyu/code/aqm_plus/train.py -useGPU -trainMode aqmbot-dep -startFrom /home/lvxinyu/code/aqm_plus/checkpoints/abot_sl_ep15_delta.vd -qstartFrom /home/lvxinyu/code/aqm_plus/checkpoints/qbot_sl_ep15_delta.vd -numEpochs 15 -CELossCoeff 1 -lrDecayRate 0.999962372474343
+
+CUDA_VISIBLE_DEVICES=4 python /home/lvxinyu/code/aqm_plus/evaluate.py -useGPU -expLowerLimit <lowerLimit> -expUpperLimit <upperLimit> -evalMode AQMBotRank -startFrom /home/lvxinyu/code/aqm_plus/checkpoints/abot_sl_ep15_delta.vd -aqmQStartFrom /home/lvxinyu/code/aqm_plus/checkpoints/qbot_sl_ep15_delta.vd -aqmAStartFrom /home/lvxinyu/code/aqm_plus/checkpoints/abot_trained_delta.vd
+
+CUDA_VISIBLE_DEVICES=6 python /home/lvxinyu/code/aqm_plus/evaluate.py -useGPU -expLowerLimit 0 -expUpperLimit 10 -evalMode AQMdialog -startFrom /home/lvxinyu/code/aqm_plus/checkpoints/abot_sl_ep15_delta.vd -aqmQStartFrom /home/lvxinyu/code/aqm_plus/checkpoints/qbot_sl_ep15_delta.vd -aqmAStartFrom /home/lvxinyu/code/aqm_plus/checkpoints/abot_trained_delta.vd
+
+CUDA_VISIBLE_DEVICES=6 python /home/lvxinyu/code/aqm_plus/evaluate.py -useGPU -expLowerLimit 0 -expUpperLimit 10 -evalMode AQMdialog -startFrom abot_sl_ep15_delta.vd -aqmQStartFrom qbot_sl_ep15_delta.vd -aqmAStartFrom abot_trained_delta.vd
+
+
+CUDA_VISIBLE_DEVICES=4 python /home/lvxinyu/code/aqm_plus/evaluate.py -useGPU -evalMode QABotsRank -qstartFrom /hhd/lvxinyu/aqm_plus/checkpoints/19-Jul-19-08-04_6647317/qbot_ep_17_q.vd -startFrom /hhd/lvxinyu/aqm_plus/checkpoints/19-Jul-19-08-04_6647317/abot_ep_17.vd
+
+CUDA_VISIBLE_DEVICES=4 python /home/lvxinyu/code/aqm_plus/evaluate.py -useGPU -evalMode dialog -beamSize 5 -qstartFrom /hhd/lvxinyu/aqm_plus/checkpoints/19-Jul-19-08-04_6647317/qbot_ep_17_q.vd -startFrom /hhd/lvxinyu/aqm_plus/checkpoints/19-Jul-19-08-04_6647317/abot_ep_17.vd
+
+
+community:
+CUDA_VISIBLE_DEVICES=4 python /home/lvxinyu/code/visualdialog-pytorch/main.py --num_abots 3 --num_qbots 1 --scratch --outf /home/lvxinyu/code/visualdialog-pytorch/data/v09/save/temp_dir
+
+
+Guesswhat:
+CUDA_VISIBLE_DEVICES=3 python /home/lvxinyu/code/guesswhat/src/guesswhat/train/train_guesser.py \
+   -data_dir  /home/lvxinyu/code/guesswhat/data/words \
+   -img_dir /home/lvxinyu/code/guesswhat/data/img/ft_vgg_img \
+   -config /home/lvxinyu/code/guesswhat/config/guesser/config.json \
+   -exp_dir /home/lvxinyu/code/guesswhat/out/guesser \
+   -no_thread 2 \
+   -continue_exp True \
+   -load_checkpoint /home/lvxinyu/code/guesswhat/out/guesser
+CUDA_VISIBLE_DEVICES=6 python /home/lvxinyu/code/guesswhat/src/guesswhat/train/train_qgen_supervised.py \
+   -data_dir /home/lvxinyu/code/guesswhat/data/words \
+   -img_dir /home/lvxinyu/code/guesswhat/data/img/ft_vgg_img \
+   -config /home/lvxinyu/code/guesswhat/config/qgen/config.json \
+   -exp_dir /home/lvxinyu/code/guesswhat/out/qgen \
+   -no_thread 2 \
+   -continue_exp True \
+   -load_checkpoint /home/lvxinyu/code/guesswhat/out/qgen
+CUDA_VISIBLE_DEVICES=5 python /home/lvxinyu/code/guesswhat/src/guesswhat/train/train_oracle.py \
+   -data_dir /home/lvxinyu/code/guesswhat/data/words \
+   -img_dir /home/lvxinyu/code/guesswhat/data/img/ft_vgg_img \
+   -crop_dir /home/lvxinyu/code/guesswhat/data/img/ft_vgg_crop \
+   -config /home/lvxinyu/code/guesswhat/config/oracle/config.json \
+   -exp_dir /home/lvxinyu/code/guesswhat/out/oracle  \
+   -no_thread 2 \
+   -continue_exp True \
+   -load_checkpoint /home/lvxinyu/code/guesswhat/out/oracle
+CUDA_VISIBLE_DEVICES=5 python /home/lvxinyu/code/guesswhat/src/guesswhat/train/train_qgen_reinforce.py \
+    -data_dir /home/lvxinyu/code/guesswhat/data/words \
+    -exp_dir /home/lvxinyu/code/guesswhat/out/loop \
+    -config /home/lvxinyu/code/guesswhat/config/looper/config.json \
+    -img_dir /home/lvxinyu/code/guesswhat/data/img/ft_vgg_img \
+    -crop_dir /home/lvxinyu/code/guesswhat/data/img/ft_vgg_crop \
+    -networks_dir /home/lvxinyu/code/guesswhat/out \
+    -oracle_identifier 156cb3d352b97ba12ffd6cf547281ae2 \
+    -qgen_identifier 867d59b933a89f4525b189da9d67f17b \
+    -guesser_identifier e2c11b1757337d7969dc223c334756a9 \
+    -evaluate_all false \
+    -store_games true \
+    -no_thread 2
