@@ -22,6 +22,6 @@ Xinyu Lyu
   5. evaluate.py
 
 ### Test result:   
-   Q-Bot
+   Q-Bot:https://github.com/XinyuLyu/Visual-Dialog/blob/master/test_results/Xnip2020-03-16_14-17-45.jpg
    A-Bot
    Image Retrieval
