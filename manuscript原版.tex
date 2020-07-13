@@ -1,0 +1,440 @@
+\documentclass[review]{elsarticle}
+
+\usepackage{lineno,hyperref}
+\modulolinenumbers[5]
+
+\journal{Journal of \LaTeX\ Templates}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{color}
+% \usepackage{subfig}
+% \usepackage{subcaption}
+\newcommand{\eat}[1]{}
+
+%%%%%%%%%%%%%%%%%%%%%%%
+%% Elsevier bibliography styles
+%%%%%%%%%%%%%%%%%%%%%%%
+%% To change the style, put a % in front of the second line of the current style and
+%% remove the % from the second line of the style you would like to use.
+%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%% `Elsevier LaTeX' style
+\bibliographystyle{elsarticle-num}
+%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+	 
+\begin{frontmatter}
+		
+\title{GuessWhich? Visual Dialog with Attentive Memory Network}
+		
+		
+%% Group authors per affiliation:
+\author[UESTC]{Lei Zhao}
+\author[Rutgers]{Xinyu Lyu}
+\author[UESTC]{Jingkuan Song}
+\author[UESTC]{Lianli Gao\corref{mycorrespondingauthor}}
+\cortext[mycorrespondingauthor]{Corresponding author}
+\ead{lianli.gao@uestc.edu.cn}
+
+\address[UESTC]{Center of Future Media, School of Computer Science and Engineering,\\ University of Electronic Science and Technology of China}
+\address[Rutgers]{Rutgers, the State University of New Jersey}
+
+	
+		
+\begin{abstract}
+%	The image retrieval-based cooperative visual dialog is a task that two agents(Q-BOT and A-BOT) communicate in natural language in the case of information asymmetry. A-BOT is responsible for answering questions depending on a given image which is not visible to Q-BOT. Then Q-BOT generates the questions based on the answers of A-BOT and a caption of the image. Moreover, Q-BOT retrieves the unseen image from an image gallery depending on the question-answer pair at each round of the dialog. These two sub-tasks of visual dialog and image retrieval alternate iteratively. However, there are many redundant dialogs because of the lack of effective memory for historical information. They also ignore the problem that the importance of the history information at different times to the current dialog round is different. What's more, the Q-BOT can not see the image, and the generated answers are not accurate enough. So it should do its best to mine the knowledge in the image caption which is manually labeled and contains lots of key information. However, the significant role of the caption information has not been paid due attention in previous works. Only in the initial round of the dialog, the caption is used to help the Q-BOT to generate questions. In this paper, we propose a novel Attentive Memory Network (AMN) to solve these problems. Specifically, the AMN mainly consists of a memory network and an additional fusion model. The memory network can hold long historical dialog information and give each dialog round a different weight. The fusion model in Q-BOT and A-BOT separately use the caption and the image. The caption information can assist the attentive generation of the questions. And the image helps the A-BOT produce more precise answers. Under their influence, the generated questions are more diverse and concentrated, and the corresponding answers are more accurate. Finally, the ability to image retrieval also can be positively affected. We pre-train our proposed model on VisDial v1.0 dataset and then fine-tune it by reinforcement learning. The experimental results on retrieval accuracy and dialog quality both greatly exceed the benchmark model. 
+
+Visual dialog is a task that two agents (Q-BOT and A-BOT) communicate in natural language on the situation of information asymmetry.
+Q-BOT generates questions based on the image caption and historical dialog, while A-Bot answers the questions grounded on images. And we play a cooperative `image guessing' game between Q-BOT and A-Bot, so that Q-BOT can select an unseen image from a set of images. However, due to the insufficient use of image caption and historical dialog, existing methods usually generate irrelevant or homogenous questions, which provide less value to this visual dialog system.
+To tackle these issues, we propose an \underline{A}ttentive \underline{M}emory \underline{N}etwork (AMN) to fully exploit the image caption and historical dialog information.
+Specifically, the attentive memory network mainly consists of a memory network and an additional fusion model. The memory network can hold long historical dialog information and give each dialog round a different weight. Aside with the historical dialog information, the fusion model in Q-BOT and A-BOT further uses the image caption and the image information respectively. The caption information can assist the attentive generation of the questions, and the image helps A-BOT produce precise answers. Under their influence, the generated questions are more diverse and concentrated, and the corresponding answers are more accurate. 
+We pre-train our proposed model on VisDial v1.0 dataset and then fine-tune it by reinforcement learning. The experimental results on guessing accuracy and dialog quality both greatly exceed the benchmark model. 
+\end{abstract}
+		
+		\begin{keyword}
+			\texttt{Visual dialog, Attentive memory network, Reinforcement learning}
+		\end{keyword}
+		
+	\end{frontmatter}
+	
+	\linenumbers
+	
+	\section{Introduction}
+	In recent years, research on the combination of vision and language has gained lots of attention, such as image captioning \cite{gao2019hierarchical, DBLP:conf/cvpr/VinyalsTBE15}, video captioning \cite{song2018deterministic, venugopalan2015sequence}, and visual question answering \cite{DBLP:journals/pami/DonahueHRVGSD17, DBLP:conf/iccv/AntolALMBZP15, DBLP:journals/cviu/WuTWSDH17, li2019beyond}. 
+	But the development of visual dialog has only just begun. Visual dialog is a task that two agents (Question-BOT and Answer-BOT, hereinafter referred to as Q-BOT and A-BOT) communicate in natural language on the condition of information asymmetry. This paper focuses on `GuessWhich' based visual dialog which is a combined task of visual dialog and image guessing (image retrieval). These two sub-tasks alternate iteratively.
+	In the t-round dialog, Q-BOT generates a question according to the caption and the previous t-1 historical dialogs. Then, A-BOT answers the generated question according to the images and the previous t-1 historical dialogs. After the interaction of Q-BOT and A BOT, Q-BOT finally guesses the corresponding image which is seen by A-BOT from the candidate images according to the dialog content. In the initial conversation, Q-BOT just receives the caption.
+	This task is of great significance in many practical application scenarios. 
+	It can assist the visually impaired patients with perceiving the surrounding environment, and aid the intelligent assistant in providing users with more informative visual information. The retrieval function can also be applied to many applications, e.g., online shopping assistant in which the users can communicate with the recommended agent to get their favorite products. 
+	
+	Previous works \cite{DBLP:conf/cvpr/DasKGSYMPB17, guo2019dual} on visual dialog just made the agents understand the input image and generate general dialog. It is a simple process from vision to language generation.
+	But the quality of generated dialogs is not satisfying enough, and the applications of this task are limited.
+	Then many methods \cite{DBLP:conf/coling/ShekharBVBBF18, DBLP:conf/naacl/ShekharVBBPBF19} about `GuessWhat' based visual dialog were proposed. 
+	But this task needs the time-consuming annotation of the objects in the image.
+	So `GuessWhich' based cooperative visual dialog \cite{DBLP:conf/iccv/DasKMLB17} that can effectively boost the communication rationality becomes a more and more valuable research topic. 
+	The distance between the guessing result and the source image is treated as the reward, which is optimized by reinforcement learning. This paper also follows RL training mechanism. 
+	There are still many challenges, the most serious issue is that the repeated and invalid interaction appears multiple times. To cope with this issue, several methods \cite{DBLP:conf/nips/LuKYPB17, DBLP:conf/atal/AgarwalGSLS19, DBLP:conf/sigdial/ZhangZY18, DBLP:conf/emnlp/MurahariCBPD19} were proposed to capture more semantic similarities and improve the conversation quality. 
+	However, there are still many redundant dialogs because of the lack of effective memory for historical information. And a crucial problem that the historical question-answer pairs have different impacts on the current dialogue round is ignored. Inspired by that, we apply the memory network to generate different weights on the historical dialogs to improve the quality of communication. But the original memory network cannot guarantee the generated questions to focus on the input image which is not visible to Q-BOT. So the caption information is crucial for Q-BOT.
+	
+	We proposed an attentive memory network. A fusion model is added to the memory network. Concretely, each historical question-answer pair in Q-BOT and A-BOT is embedded to make up a memory. In every dialog round, the memory is queried to produce the weighted history. Then the fusion model of the attentive memory network in Q-BOT uses the caption information, the embedded fact, and the weighted history to generate the next question and the guessing images. Meanwhile, the fusion model of the attentive memory network in A-BOT takes advantage of the encoded question, the image, and the weighted history to produce the answer. Under the influence of the attentive memory network, Q-BOT provides more diverse and effective questions. Meanwhile, A-BOT can produce more accurate answers. The most intuitive performance is that the generated dialogs significantly reduce the repetitions, and the discrete action space becomes larger. Thanks to the improvement of dialogue quality and the effective use of the caption information, Q-BOT can complete image retrieval precisely. 
+	The contributions of this paper are summarized as follows: 
+	\begin{itemize}
+		\item We use memory network in the cooperative `GuessWhich' game between Q-BOT and A-BOT. For the current dialog round, memory network can learn the different weights of the historical question-answer pairs at different times. The weighted history information can reduce the repetition of the generated dialogs and make image retrieval efficient. The memory network is simple but effective enough.
+		\item We propose a novel Attentive Memory Network that adds a fusion model to the memory network. The fusion model can effectively use the manually labeled caption and the image.  Thus the historical information is focused under the impact of multivariate information fusion, and the generated dialogs and the predicted image representation can be visually grounded.
+		\item Experiments conducted on VisDial 1.0 datasets demonstrate that our generated dialogs are natural and precise, and the results exceed the state-of-the-art `GuessWhich' based visual dialog algorithms. Extensive image retrieval experiments prove that our method  can also generate more accurate results compared to the benchmark models.
+	\end{itemize} 
+	
+	The rest of this paper is organized as follows. Related work is presented in Section 2. The details of our proposed method are presented in Section 3 mainly including the framework and training strategy. Extensive experiment is conducted in Section 4. At last, a conclusion is drawed in Section 5.
+	
+	
+	\section{Related Work}In this section, three categories of related works including visual dialog, goal-oriented visual dialog and memory networks are described.
+	\subsection{Visual Dialog}
+	
+	Visual dialog refers to the task that an AI bot holds a meaningful communication with a human or another bot in natural language about an input image. It was firstly proposed by Abhishek Das \textit{et al.} \cite{DBLP:conf/cvpr/DasKGSYMPB17}. Besides the definition of visual dialog, they also developed a large-scale Visual Dialog dataset named VisDial which was the foundation of the development of this research field.
+	Encoder-decoder architectures had usually been exploited to achieve visual dialog, and these models were still active up to now. There were many repeated dialogs which led to lots of invalid questions. Meanwhile, the answers were often so conservative that the dialog fell into multiple circles. 
+	All of that made it lack value for practical applications. Since then, a lot of research works had been proposed to alleviate the above problems.
+	
+	\subsection{Goal-oriented Visual Dialog}
+	To improve the quality of dialog and increase its actual value in real-life scenario, many methods \cite{DBLP:conf/cvpr/VriesSCPLC17, DBLP:conf/emnlp/HuWLTXWC18, DBLP:conf/coling/ShekharBVBBF18, DBLP:conf/naacl/ShekharVBBPBF19, abbasnejad2019s, shukla2019should, DBLP:conf/iccv/DasKMLB17, DBLP:conf/nips/LuKYPB17, DBLP:conf/atal/AgarwalGSLS19, DBLP:conf/sigdial/ZhangZY18, DBLP:conf/emnlp/MurahariCBPD19} about goal-oriented visual dialog models were proposed. 
+	There are mainly two branches including `GuessWhat' \cite{DBLP:conf/cvpr/VriesSCPLC17, DBLP:conf/emnlp/HuWLTXWC18, DBLP:conf/coling/ShekharBVBBF18, DBLP:conf/naacl/ShekharVBBPBF19, abbasnejad2019s} and `GuessWhich' \cite{shukla2019should, DBLP:conf/iccv/DasKMLB17, DBLP:conf/nips/LuKYPB17, DBLP:conf/atal/AgarwalGSLS19, DBLP:conf/sigdial/ZhangZY18, DBLP:conf/emnlp/MurahariCBPD19}. 
+	
+	The `GuessWhat' game is to identify an unknown object in a complex image through a meaningful dialog, while the cooperative bots both know the image information. This task needs the object-level annotation which is time-consuming, and the answers to the questions were limited to Yes, No and N/A.
+	The initial method \cite{DBLP:conf/cvpr/VriesSCPLC17} trained the agents by supervised learning, and it would result in repeated and invalid dialogs. Then, Harm de Vries \textit{et al.} \cite{DBLP:conf/cvpr/VriesSCPLC17} added a decision-making component that decided whether to continue the following dialogs. 
+	Abbasnejad \textit{et al.} \cite{abbasnejad2019s} proposed a Bayesian model of uncertainty to identify valid information and generated more efficient questions.
+	Ravi Shekhar \textit{et al.} \cite{DBLP:conf/naacl/ShekharVBBPBF19} jointly trained the mixed process between `GuessWhat' and generating questions by reinforcement learning which was more natural for visual dialog, and proposed a visual-grounded dialog history encoder to integrate multi-modal information efficiently. 
+	Shukla \textit{et al.} \cite{shukla2019should} proposed an end-to-end `GuessWhat' based visual dialog model using a combined learning mechanism between reinforcement learning and regularized information gain. 
+	This task could improve the quality of the dialog, but the required dataset need many human labors. Therefore, its actual development would be somewhat limited. 
+	
+	The `GuessWhich' game was firstly proposed in \cite{DBLP:conf/iccv/DasKMLB17}. It is a task of learning cooperative visual dialog agents through image retrieval. Q-BOT does not know the image, it just generates a series of questions by the caption information and the historical dialogs. A-BOT can get the image information, and it takes the charge of answering the questions depending on the image, the question, and the historical information. 
+	At the last of each round, Q-BOT selects the target image from the candidate image pooling. This subtask still faces the problem that there are many repeated dialogs with low quality. 
+	Jiasen Lu \textit{et al.} \cite{DBLP:conf/nips/LuKYPB17} made use of a discriminative dialog model to rank the candidate responses. Then the generic responses were reduced effectively. 
+	Community based visual dialog model was proposed in \cite{DBLP:conf/atal/AgarwalGSLS19}. Each agent communicated with multiple agents to learn abundant information. 
+	Jiaping Zhang \textit{et al.} \cite{DBLP:conf/sigdial/ZhangZY18} developed a framework that utilized the multi-modal state representation by hierarchical decision learning. Moreover, they used state adaptation to combine the relevant information. 
+	Vishvak Murahari \textit{et al.} \cite{DBLP:conf/emnlp/MurahariCBPD19} added an additional objective that stimulated Q-BOT to ask more attentive and various questions.
+	
+	\subsection{Memory Networks}
+	Memory networks \cite{DBLP:journals/corr/WestonCB14, sukhbaatar2015end, xiong2016dynamic, vaswani2017attention, danihelka2016associative} refer to the networks which have additional memory where information can be read and written. They were originally used especially in the NLP field.
+	Recently, memory networks have been penetrated the computer vision field and the intersection of vision and language. It was first applied to visual language in \cite{DBLP:conf/cvpr/DasKGSYMPB17}. This method devised a memory bank that maintained historical dialogs. Then weights of the previous rounds were computed by a query operation and a softmax function. 
+	Finally, the combination of the historical vectors was used to generate dialog. Compared with LSTM, memory networks can hold longer history dialogs. 
+	Akshat Agarwal \textit{et al.} \cite{DBLP:conf/atal/AgarwalGSLS19} also applied memory networks to goal-oriented cooperative dialog. But they just used fully connected layers to act as the state encoder, the questions encoder, and the answer encoder. 
+	Their interactive modes were different seriously.
+	
+	Our task inspired by \cite{DBLP:conf/iccv/DasKMLB17} belongs to the `GuessWhich' based visual dialog. Different from ordinary memory networks, the proposed attentive memory network can take more advantage of the visual and language information.
+	It can generate coherent dialogs and retrieve images effectively by excavating the caption knowledge and the historical information.
+
+	\section{Approach}
+	
+	The aim of this work is to develop a novel framework for `GuessWhich' based visual dialog by an attentive memory network (AMN). AMN endows the history information different weights, and upgrades the importance of caption information which is essential for the generation of the effective questions and the image retrieval. 
+	Under the positive influence of AMN, the interaction between these two agents is more relevant, diverse and coherent.
+	In this section, we first introduce the framework of our method followed by detailed introduction of each component. Training strategy will be described at last. 
+\begin{figure*}[ht]
+	\centering
+	\centering
+	\includegraphics[width=\textwidth]{picture/AMN.pdf}
+	\centering 
+	%\includegraphics[width=\textwidth]{fig/framework_final.pdf}
+	\caption{General framework of the proposed method. It illustrates the architecture of the two agents and the interaction between them at round t. Firstly, a question $\mathbf{q_{t}}$ is generated from question decoder based on the state encoding $\mathbf{s^{Q}_{t-1}}$. Secondly, A-BOT receives the question and encodes it. The encoded question queries the memory $\mathbf{M^{A}_{t-1}}$, and then the fusion model in the AMN$^A$ outputs the contacted information ($\mathbf{f^{Q}_{t}}$, $\textbf{C}$, $\mathbf{h^{Q}_{t-1}}$) which is used to decode an answer $\mathbf{a_{t}}$. Thirdly, A-BOT delivers the answer $\mathbf{a_{t}}$ to Q-BOT. And the question-answer pair is embedded as a fact $\mathbf{f_{t}}$ which queries the memory $\mathbf{M^{Q}_{t-1}}$. Then the fusion model in AMN$^Q$ outputs the contacted information ($\mathbf{q_{t}}$, $\textbf{I}$, $\mathbf{h^{A}_{t-1}}$) which is used to update the state $\mathbf{s^{Q}_{t}}$. Finally, Q-BOT predicts an image representation $\mathbf{\hat{y}_{t}}$ depending on the state $\mathbf{s^{Q}_{t}}$, and receives a reward.} 
+	\label{fig.framework}
+\end{figure*}	
+
+\subsection{Overview}
+	The overview of our approach is illustrated in Fig.~\ref{fig.framework} which shows just a round of interaction.
+	It mainly consists of two parts: Q-BOT that is responsible for asking coherent questions, and A-BOT that is in charge of answering corresponding questions by the visual content. 
+	Then Q-BOT also needs to retrieve the target image at the end of each dialog round depending on the predicted feature.
+	
+	
+	% In round $t$, Q-BOT decodes a question $\mathbf{q_{t}}$ depending on its hidden state $\mathbf{s^{Q}_{t}}$ which contains the information of the caption and the historical fact $\left[\textbf{c}, \mathbf{f_{1}}, \mathbf{f_{2}}, \dots, \mathbf{f_{t-1}} \right]$ (every question and answer pair is contacted as a fact in both agents.).  
+	%Then A-BOT receives the question $\mathbf{q_{t}}$ and encodes it. Afterwards, the encoded question is input into the attentive memory network AMN$^{A}$ which output the fusion information that contacts the feature of the input image $\textbf{I}$, the encoded question $\mathbf{q_{t}}$, and an attentive history $\mathbf{H^{A}_{t-1}}$ which is the dot-add output of the weighted memory is input to history encoder to produce the hidden state of the next round $\mathbf{s^{A}_{t}}$.   
+	%And then an answer is decoded depending on the generated $\mathbf{s^{A}_{t}}$. The ($\mathbf{q_{t}}$, $\mathbf{a_{t}}$) pair is embedded as $\mathbf{f_{t}}$ which is filled into the memory $\mathbf{M^{A}_{t}} = \left[\mathbf{f_{1}}, \mathbf{f_{2}}, \dots, \mathbf{f_{t}} \right]$. 
+	
+%	The Q-BOT receives the answer $a_{t}$ and embeds the contacted pair ($\mathbf{q_{t}}$, $\mathbf{a_{t}}$) to $\mathbf{f^{Q}_{t}}$ which is input into attentive memory network AMN$^{Q}$. 
+%	Its output is the contacted information of the fact $\mathbf{f^{Q}_{t}}$, the caption of the image $c$, and the history memory $\mathbf{h^{Q}_{t-1}}$. Then the history encoder output the next state $\mathbf{s^{Q}_{t}}$.  
+%	Finally, feature regression network estimates an embedding vector $\mathbf{\hat{y}_{t}}$ of the image $\textbf{I}$ based on $\mathbf{s^{Q}_{t}}$. Image retrieval is done by the computation of the similarity between the embedding vector and the candidate image % feature.
+	
+	
+	\subsection{Q-BOT and A-BOT Architecture}
+	\textbf{Q-BOT} mainly consists of five components, including question decoder, fact encoder, attentive memory network, history encoder, and feature regression network. The question decoder is a simple LSTM which outputs a question $\mathbf{q_{t}}$ through the previous hidden state $\mathbf{s^{Q}_{t-1}}$.
+	Then A-BOT will respond to the question $\mathbf{q_{t}}$, and return a corresponding answer $\mathbf{a_{t}}$ to Q-BOT. The fact encoder is also an LSTM which embeds the concatenated ($\mathbf{q_{t}},\mathbf{a_{t}}$) into a 512-dimensional vector $\mathbf{f^{Q}_{t}}$ which is used as a query.
+	
+	\textbf{Attentive memory network AMN$^{Q}$} is composed of memory reading and information fusion. The memory $\mathbf{M^{Q}_{t-1}}$  refers to the stored fact $\left[\mathbf{f_{1}}, \mathbf{f_{2}}, \dots, \mathbf{f_{t-1}} \right]$. Because all facts are 512-d vectors, so the memory $\mathbf{M^{Q}_{t-1}}$ is a $(t-1) \times 512$ matrix. 
+	The process that the fact $\mathbf{f_{t}}$ queries the memory $\mathbf{M^{Q}_{t}}$ is matrix multiplication essentially. Then an attention vector $\mathbf{A^{Q}}$ for the memory $\mathbf{M^{Q}_{t-1}}$ is produced:
+	\begin{equation}
+	\mathbf{A^{Q}}=\operatorname{Softmax}\left(\mathbf{f_{t}^{Q}} \times\left(\mathbf{M_{t}^{Q}}\right)^{T}\right)=\left[\mathbf{a_{1}}, \mathbf{a_{2}} \dots \mathbf{a_{t-1}}\right]
+	\label{Eq1}
+	\end{equation}
+	Afterwards, the weighted memory $\left[\mathbf{a_{1}f_{1}}, \mathbf{a_{2}f_{2}}, \dots, \mathbf{a_{t-1}f_{t-1}} \right]$ is generated by dot product. An attentive history $\mathbf{h^{Q}_{t-1}}$ can be computed as:
+	\begin{equation}
+	\mathbf{h_{t-1}^{Q}}=\mathbf{a_{1} f_{1}}+\mathbf{a_{2} f_{2}}+\ldots+\mathbf{a_{t-1} f_{t-1}}
+	\label{Eq2}
+	\end{equation}
+	The next part is the information fusion. Different from the common methods of `GuessWhich' based visual dialog which use the caption information only in the first round to initialize the question encoder, AMN$^{Q}$ takes advantage of the caption $\textbf{C}$ in all rounds of the interaction.
+	The caption $\textbf{C}$ can prompt the generated questions more relevant on the condition that Q-BOT does not know the knowledge of the image. Specifically, AMN$^{Q}$ contacts the caption $\textbf{C}$, the embedded $\mathbf{f^{Q}_{t}}$, and the attentive history $\mathbf{h^{Q}_{t-1}}$. 
+	The concatenated information is taken as the input of the history encoder. Moreover, the embedded fact $\mathbf{f^{Q}_{t}}$ will be written in the memory.
+	
+	The history encoder is an LSTM that outputs the state of the current round $\mathbf{s^{Q}_{t}}$, which is used to generate the next question. Meanwhile, feature regression network is a single fully-connected layer that takes $\mathbf{s^{Q}_{t}}$ to produce a representation prediction $\mathbf{\hat{y}_{t}}$ of the image $\textbf{I}$.
+	
+	\textbf{A-BOT} is also composed of five parts, including question encoder, attentive memory network, history encoder, answer decoder, and fact encoder. 
+	The question encoder is an LSTM which encodes the received question $\mathbf{q_{t}}$ to a 512-d vector which is input into the Attentive Memory Network AMN$^{A}$.
+	
+	\textbf{Attentive memory network AMN$^{A}$} consists of memory reading and information fusion like AMN$^{Q}$. And the memory also refers to the stored fact $\mathbf{M^{A}_{t-1}} = \left[\mathbf{f_{1}}, \mathbf{f_{2}}, \dots, \mathbf{f_{t-1}} \right]$. But the query vector is different from the query in AMN$^{Q}$. 
+	In AMN$^{A}$, the encoded question $\mathbf{q_{t}}$ is used to read the memory. The process of generating attentive history $\mathbf{h^{A}_{t-1}}$ is similar to that of $\mathbf{h^{Q}_{t-1}}$. Firstly, the attention vector $\mathbf{A^{A}}$ for the memory $\mathbf{M^{A}_{t-1}}$ is produced:
+	\begin{equation}
+		\mathbf{A^{A}}=\operatorname{Softmax}\left(\mathbf{q_{t}} \times\left(\mathbf{M_{t-1}^{A}}\right)^{T}\right)=\left[\mathbf{a_{1}}, \mathbf{a_{2}} \dots \mathbf{a_{t-1}}\right]
+		\label{Eq3}
+		\end{equation}
+	Then the weighted memory $\left[\mathbf{a_{1}f_{1}}, \mathbf{a_{2}f_{2}}, \dots, \mathbf{a_{t-1}f_{t-1}} \right]$. The attentive history $\mathbf{h^{A}_{t-1}}$ can be computed as:
+	\begin{equation}
+	\mathbf{h_{t-1}^{A}}=\mathbf{a_{1} f_{1}}+\mathbf{a_{2} f_{2}}+\ldots+\mathbf{a_{t-1} f_{t-1}}
+	\label{Eq4}
+	\end{equation}
+	In the part of information fusion, the concatenated information including the encoded question $\mathbf{q_{t}}$, the feature of the input image, and the attentive memory $\mathbf{h^{A}_{t-1}}$ is input into the history encoder.
+	The image feature is extracted from the FC7 layer of VGG. The history encoder is an LSTM that produces a state encoding of the current round $\mathbf{s^{A}_{t}}$. The answer decoder is also an LSTM that generates an answer $\mathbf{a_{t}}$ by natural language. 
+	Then the generated answers can take context information into account. The accuracy of the answers can get a certain degree of promotion. 	
+	
+	
+	\subsection{Training Strategy}
+	We follow the training strategy used by \cite{DBLP:conf/iccv/DasKMLB17}. It includes two training process: supervised training and       fine-tuning by reinforcement learning. The supervised training aims to pre-train Q-BOT and A-BOT separately making the agents can communicate by English.
+	Reinforcement learning helps the pre-trained model to achieve convergence by fine-tuning. Finally, Q-BOT and A-BOT accomplish interacting with natural language. These two training processes are both essential and interdependent.
+	
+	\textbf{Supervised training.} A-BOT is first to be pre-trained on ImageNet which can guarantee A-BOT recognize some general scenes. Then Q-BOT and A-BOT are separately pre-trained on the train split of VisDial v1.0 \cite{DBLP:conf/iccv/DasKMLB17} by a supervised manner. 
+	A Maximum Likelihood Estimation (MLE) objective is used to optimize the agents. 
+	Based on the ground truth dialog which is produced by imitating human conversation, Q-BOT can generate a series of questions, and A-BOT responses to the corresponding question. 
+	Considering image retrieval subtask, the feature regression network in Q-BOT is optimized by minimizing the Mean Squared Error (MSE) loss between the real feature of the image $\textbf{y}$ and the representation prediction $\mathbf{\hat{y}}$. 
+	Specifically, we pre-train the two agents for 15 epochs. These pre-training processes lay a foundation. But only the ground truth questions and answers are used as the history. There is no natural and meaningful interaction between Q-BOT and A-BOT actually.
+	Thus, fine-tuning the pre-trained model by reinforcement learning is logical and essential.
+	
+	\textbf{Reinforcement learning.} In this training process, the available information is only the image and its caption. Q-BOT and A-BOT interact with each other through self-talk. 
+	We firstly introduce five elements of reinforcement learning including action, state, environment, reward, and policy. And then the specific training procedure will be introduced.
+	
+	Action space is composed of all possible sequential English words. In order to ensure questions and answers are non-redundant and precise, the action space should be large and diverse enough. 
+	Moreover, Q-BOT needs to make a representation prediction of the input image in each dialog round. 
+	The state between Q-BOT and A-BOT is different. The state of Q-BOT $\mathbf{s^{Q}_{t}}$ contains the caption $\textbf{C}$ and the historical question-answer pairs. The state of A-BOT $\mathbf{s^{A}_{t}}$ consists of the image $\textbf{I}$, the current question $\mathbf{q_{t}}$, and the historical question-answer pairs. 
+	We define the parameters of those LSTMs and A-BOT as $\mathbf{\theta^{Q}}$ and $\mathbf{\theta^{A}}$. The policy of Q-BOT aims to generate questions depending on the state $\mathbf{s^{Q}_{t}}$ and the parameters of the LSTMs $\mathbf{\theta^{Q}}$ in Q-BOT. 
+	The policy of A-BOT aims to produce answers relying on the state $\mathbf{s^{A}_{t}}$ and the parameters of the LSTMs $\mathbf{\theta^{A}}$. Moreover, the policy about the feature regression network aims to output the representation prediction according to the state $\mathbf{s^{Q}_{t}}$, the answer $\mathbf{a_{t}}$ and the parameters of the regression network $\mathbf{\theta^{f}}$. 
+	The environment is just the input image and the caption. The reward of every round is defined as follow:
+	\begin{equation}
+	\mathbf{r_{t}\left(s_{t}^{Q},\left(q_{t}, a_{t}, y_{t}\right)\right)}=l\left(\mathbf{y_{t-1}, y^{g t}}\right)-l\left(\mathbf{y_{t}, y^{g t}}\right)
+	\label{Eq5}
+	\end{equation}
+	where $\ell(\cdot, \cdot)$ is the L-2 distance between the generated representation prediction and the feature of the real image. If $\mathbf{r_{t}\left(s_{t}^{Q},\left(q_{t}, a_{t}, y_{t}\right)\right)}$ is positive, the representation prediction is close to the true image, and the following retrieval accuracy will be improved.
+	Inversely, if $\mathbf{r_{t}\left(s_{t}^{Q},\left(q_{t}, a_{t}, y_{t}\right)\right)}$ is negative, the quality of the representation prediction becomes bad, and the retrieval accuracy will also be reduced. 
+	Policy parameters $\mathbf{\theta^{Q}}$, $\mathbf{\theta^{A}}$, $\mathbf{\theta^{f}}$ are updated by REINFORCE \cite{DBLP:journals/ml/Williams92} algorithm.	
+    
+    The supervised learning and reinforcement learning are combined as a curriculum. Firstly, we train the model by supervised learning for the N rounds, and then fine-tune the pre-trained model by reinforcement learning for the rest 10-K rounds. Then the value of K gradually decreases to 0. At last, the model will converge depending on this training strategy.
+	
+	\section{Experiments}
+	In this section, we firstly introduce the detailed implementations of the proposed model. And then our proposed method is evaluated on the VisDial v1.0 dataset and compared with the previous works. An ablation study is also conducted to test the effect of the important components in our model. 
+	\subsection{Implementation Details} 
+	We implement the proposed model using Pytorch and build on top of the publicly available implementations of \cite{DBLP:conf/iccv/DasKMLB17}. 
+	The feature extractors for image, caption, question, and answer are all VGG-16 \cite{DBLP:journals/corr/SimonyanZ14a}. Specifically, the FC-7 features are selected. 
+	All the LSTMs in Q-BOT and A-BOT are single layer with 512-d hidden state. A-BOT is initialized by the model pre-trained on ImageNet. 
+	Then Q-BOT and A-BOT are separately pre-trained on VisDial v1.0 with supervised learning for 15 epochs. The mini-batch size, learning rate, and weight decay are set as $20$, $1e-3$ and $0.99$ separately. The dropout rate used to alleviating over-fitting is set as 0.5. 
+	A-BOT produces 100 answers at each round, and the beam-search is set as 5 (only 5 answers are feedback to Q-BOT). The parameters in the reinforcement learning process are the same as the pre-training. All the experiments are conducted on two NVIDIA GeForce GTX 1080 Tian GPUs. 
+	
+	\subsection{Dataset}
+	\textbf{VisDial dataset v1.0} is the most popular dataset about visual dialog currently. It totally consists of 130K dialogs and 1.3M question-answer pairs on about 130k images from the COCO dataset \cite{DBLP:conf/eccv/LinMBHPRDZ14}. 
+	Specifically, the training set includes about 120k dialogs and 1.2M question-answer pairs on 123287 images from COCO-trainval, the validation and test set composed of 100K question-answer pairs on 10K images from Flickr are divided by the proportion of 2:8. 
+	It is important to note that each dialog in the test set contains a random length within 10 rounds, while every dialog in training and validation set consists of 10 rounds. The distribution of the additional Flickr image and its caption can be well matched to the COCO dataset. 
+	
+	\subsection{Results}
+	There are two subtasks in our task, including visual dialog and image retrieval. We evaluate the generated visual dialog on the valid split of VisDial v1.0, and image retrieval on the test split of VisDial v1.0 separately. 
+	
+	\subsubsection{Results of Visual Dialog}
+	The evaluation metrics for visual dialog are Mean Reciprocal Rank (MRR), Mean Rank, and Recall@k. MRR and Mean Rank are the universal mechanisms to evaluate search algorithms, especially the field that including many results. 
+	In this task, each question in the 10 rounds produces 100 candidate answers. Mean Rank computes their average rank assigned to the ground truth answer over the whole dialog, and MRR computes the average reciprocal of their rank. Recall@k replies to the percentage of the generated answers whose rank is less than k. 
+	Specifically, the value of K is set to 1, 5, 10. The three measures as mentioned above can comprehensively evaluate the performance of our model. Higher is better for MRR and Recall@k, lower is better for Mean Rank.
+	
+	We compare our method with 3 previous architectures, i.e., ADQ \cite{DBLP:conf/emnlp/MurahariCBPD19}, RL \cite{DBLP:conf/iccv/DasKMLB17}, and CR \cite{DBLP:conf/atal/AgarwalGSLS19}. 
+	The comparison results are shown in Tab.~\ref{Tab1}. Our proposed method almost outperforms all of the existing algorithms. Especially, for the most important evaluation metric recall@K, our method is significantly better than the others.   
+	Moreover, I emphasize again that the task is the `GuessWhich' based visual dialog, so we do not compare the methods that only focus on the generation of visual dialog.
+	The visualization results are shown as Fig.~\ref{fig.vis_di}. Compared with RL \cite{DBLP:conf/iccv/DasKMLB17}, we can find that there are fewer repetitive question-answers. Especially in the last example, the number of repetitions dropped from five to two. The generated dialogs are more diverse and precise compared with the baseline.
+	\begin{table}[]
+		\centering
+		\label{my-label}
+			\begin{tabular}{|c|c|c|c|c|c|}
+				\hline
+				model    & Recall@1 & Recall@5 & Recall@10 & Mean Rank & MRR   \\ \hline
+				ADQ \cite{DBLP:conf/emnlp/MurahariCBPD19}      & 36.31    & 56.26    & 62.53     & 19.35     & 0.465 \\ \hline
+				RL \cite{DBLP:conf/iccv/DasKMLB17}             & -         & 53.67    & 60.48     & 21.13     & 0.437 \\ \hline
+				Ours                              & \textbf{42.17}    & \textbf{63.24}    & \textbf{68.65}     & \textbf{15.82}     & \textbf{0.613} \\ \hline
+			\end{tabular}
+		\caption{The quality comparison of the generated dialog with other algorithms on VisDial v1.0. For recall@k and MRR, the higher the result, the better the performance. The Mean Rank is opposite. }
+		\label{Tab1}
+	\end{table}
+	
+	\begin{figure*}[ht]
+		\centering
+		\includegraphics[width=1.0\textwidth]{picture/vis_di.pdf}
+		\centering 
+		%\includegraphics[width=\textwidth]{fig/framework_final.pdf}
+		\caption{The qualitative results of our method for visual dialog.} 
+		\label{fig.vis_di}
+	\end{figure*}	
+	
+	\subsubsection{Results of Image Retrieval}
+	The evaluation metric for retrieval function is Image Retrieval Percentile that is computed by the rank of the ground truth representation in the sorted test image, according to their distance to the predicted feature. 
+	Then we will compute the mean percential rank of the input image. If a percential rank is $90\%$, the ground truth image is closer to the prediction than $90\%$ images in the test set.
+	The image retrieval experiment is conducted on the test split of VisDial v1.0 as described in the dataset part. 
+	At the end of each dialog round, A-BOT feedbacks the responses selected from 100 candidate answers, and then Q-BOT generates representation prediction. Finally, the image retrieval function is implemented. In this section, we compared our method with several algorithms, including RL \cite{DBLP:conf/iccv/DasKMLB17}, ADQ \cite{DBLP:conf/emnlp/MurahariCBPD19}, ML \cite{DBLP:conf/atal/AgarwalGSLS19}, LS \cite{DBLP:conf/iclr/LeeGYYH19}. 
+	The comparison results are shown in Tab.~\ref{Tab2}. And Fig.~\ref{fig.retrieval} shows the mean percetile rank of the input image for our proposed method and four baselines. 
+	Experiment results show that the image retrieval capability of our proposed method is better than all the baselines. The great contribution is that the attentive memory network can help our model make the most use of the history information and the caption of the source image. 
+	There will be less repeated and invalid generated questions. Meanwhile, the answers also become more precise. Visual dialog and image retrieval can affect each other positively. 
+	Its visualization is shown in Fig.~\ref{fig.vis_re}. In the last row, the retrieved images are similar to the input of image in general. Almost all of the images consist of a plate of food and a table. But there are some differences in more details, such as the attribute of the tables. Some tables in the retrieved images are not wooden. The reason is that the extracted features about the background is somewhat inadequate. This can be relieved by richer visual features.
+	
+	\begin{table}[]
+		\centering
+		\label{my-label}
+			\begin{tabular}{c|c|c|c|c|c}
+				\hline
+				Round & RL \cite{DBLP:conf/iccv/DasKMLB17}    & ADQ \cite{DBLP:conf/emnlp/MurahariCBPD19}    & ML \cite{DBLP:conf/atal/AgarwalGSLS19}    & LS \cite{DBLP:conf/iclr/LeeGYYH19} & Ours  \\ \hline
+				0     & 90.72 & 95.29 & 88.13 & 95.50 & \textbf{96.84} \\
+				1     & 93.49 & 95.46 & 88.28 & 95.77 & \textbf{97.15} \\
+				2     & 93.76 & 95.49 & 88.30 & 96.00 & \textbf{97.25} \\
+				3     & 93.90 & 95.34 & 88.29 & 96.29 & \textbf{97.33} \\
+				4     & 93.75 & 95.25 & 88.28 & 96.47 & \textbf{97.40} \\
+				5     & 93.93 & 95.26 & 88.29 & 96.56 & \textbf{97.46} \\
+				6     & 93.79 & 95.28 & 88.21 & 96.63 & \textbf{97.51} \\
+				7     & 93.72 & 95.18 & 88.28 & 96.76 & \textbf{97.55} \\
+				8     & 93.79 & 95.19 & 88.29 & 96.93 & \textbf{97.58} \\
+				9     & 93.58 & 95.06 & 88.29 & 97.07 & \textbf{97.60} \\
+				10    & 93.38 & 94.99 & 88.29 & 97.18 & \textbf{97.63} \\ \hline
+			\end{tabular}
+		\caption{The comparison of image retrieval capability with other algorithms. The higher the percentile, the better the performance}
+		\label{Tab2}
+	\end{table}
+	
+	\begin{figure*}[ht]
+		\centering
+		\includegraphics[width=1.0\textwidth]{picture/comp_re.pdf}
+		\centering 
+		
+		\caption{The image retrieval evaluation.} 
+		\label{fig.retrieval}
+	\end{figure*}	
+	
+	\begin{figure*}[]
+		\centering
+		\centering
+		\includegraphics[width=\textwidth]{picture/vis_re.pdf}
+		\centering 
+		%\includegraphics[width=\textwidth]{fig/framework_final.pdf}
+		\caption{The qualitative results of our method for image retrieval. We randomly choose the round 2 and round 6 in the cooperative interaction. Those numbers represent L-2 distance between the predicted representation and the real image in fc7 space. The lower the value is, the more similar the image is. The retrieval results are intuitively accurate.} 
+		\label{fig.vis_re}
+	\end{figure*}	
+	
+	\begin{table}[]
+		\centering
+		\label{mylabel}
+
+			\begin{tabular*}{1.0\textwidth}{c|c|c|c|c|c}
+				\hline																				& Recall@1 & Recall@5 & Recall@10 & Mean Rank & MRR   \\ \hline
+				\begin{tabular}[c]{@{}c@{}}Q-BOT (no MN)\\ A-BOT (no MN)\end{tabular} & 42.09    & 53.67    & 60.48     & 21.13     & 0.437 \\ \hline
+				\begin{tabular}[c]{@{}c@{}}Q-BOT (MN)\\ A-BOT (no MN)\end{tabular}    & 39.82    & 59.13    & 63.78     & 19.92     & 0.498 \\ \hline
+				\begin{tabular}[c]{@{}c@{}}Q-BOT (no MN)\\ A-BOT (MN)\end{tabular}    & 41.09    & 61.746   & 67.65     & 17.15     & 0.515 \\ \hline
+				\begin{tabular}[c]{@{}c@{}}Q-BOT (MN)\\ A-BOT (MN)\end{tabular}       & \textbf{42.172}   & \textbf{63.24}    & \textbf{68.48}     & \textbf{15.82}     & \textbf{0.613} \\ \hline
+			\end{tabular*}
+		\caption{Memory Network analysis of visual dialog on the validation set of VisDial v1.0.}
+		\label{Tab3}
+	\end{table}
+	
+	\subsection{Ablation Study} 
+	In order to comprehensively and deeply analyze the proposed method and further demonstrate the effect of the attentive memory network, 
+	we present an extensive ablation study on VisDial v1.0 to evaluate the individual contributions of its major components. 
+	Thus, we consider different variants of the proposed method and compare their effect on the two subtasks separately.
+	
+	\textbf{Ablation study on visual dialog.} As mentioned before, there are so many repeated questions that the interaction is inefficient in previous methods. 
+	So the additional caption and weighted history information are added to the process of question generation in each dialog round. Moreover, the attentive history is also used to boost the quality of the answers.
+	Then the role of memory network is verified.
+	We consider four AMN variants about the memory network: \emph{Q-BOT (no MN), A-BOT (no MN)}, \emph{Q-BOT (MN), A-BOT (no MN)}, \emph{Q-BOT (no MN), A-BOT (MN)}, \emph{Q-BOT (MN), A-BOT (MN)}. 
+	Their results are shown in Tab.~\ref{Tab3}. It can be observed that both the memory network in Q-BOT and A-BOT can significantly boost the quality of the generated visual dialog. 
+	\emph{Q-BOT (MN) and A-BOT (MN)} performs better than \emph{Q-BOT (no MN), A-BOT (no MN)} by $13\%$ on Recall@10 and $33\%$ on Mean Rank. 
+	These results prove the importance of the memory network for visual dialog. 
+	
+
+	\begin{table}[]
+	\centering
+	\label{mylabel}
+	\scalebox{0.8}{
+		\begin{tabular}{c|c|c|c|c}
+			\hline
+			Round & \begin{tabular}[c]{@{}c@{}}Q-BOT (no MN)\\ A-BOT (no MN)\end{tabular} & \begin{tabular}[c]{@{}c@{}}Q-BOT (MN)\\ A-BOT (no MN)\end{tabular} & \begin{tabular}[c]{@{}c@{}}Q-BOT (no MN)\\ A-BOT (MN)\end{tabular} & \begin{tabular}[c]{@{}c@{}}Q-BOT (MN)\\ A-BOT (MN)\end{tabular} \\ \hline
+			0     & 90.79                                                               & 91.98                                                            & 95.46                                                            & \textbf{96.83}                                                         \\
+			1     & 93.48                                                               & 94.81                                                            & 95.78                                                            & \textbf{97.15}                                                         \\
+			2     & 93.76                                                               & 94.88                                                            & 95.92                                                           & \textbf{97.25}                                                         \\
+			3     & 93.98                                                               & 94.92                                                            & 96.05                                                            & \textbf{97.33}                                                         \\
+			4     & 93.76                                                               & 94.94                                                            & 96.15                                                            & \textbf{97.40}                                                         \\
+			5     & 93.93                                                               & 94.95                                                            & 96.21                                                          & \textbf{97.46}                                                         \\
+			6     & 93.79                                                               & 94.95                                                            & 96.28                                                           & \textbf{97.51}                                                         \\
+			7     & 93.72                                                               & 94.94                                                            & 96.31                                                          & \textbf{97.55}                                                         \\
+			8     & 93.75                                                               & 94.54                                                            & 96.35                                                          & \textbf{97.58}                                                         \\
+			9     & 93.59                                                               & 94.93                                                            & 96.39                                                          & \textbf{97.60}                                                         \\
+			10    & 93.39                                                               & 94.88                                                            & 96.40                                                          & \textbf{97.63}                                                         \\ \hline
+		\end{tabular}
+	}
+	\caption{Memory Network analysis of image retrieval on the test spilt of VisDial v1.0.}
+	\label{Tab4}
+\end{table}
+
+	\begin{figure*}[]
+		\centering
+		\includegraphics[width=0.8\textwidth]{picture/ab_MN.pdf}
+		\centering 
+		\caption{The comparison of the variants about memory network.} 
+		\label{fig.mn_ab}
+	\end{figure*}
+	
+	\begin{table}[]
+		\centering
+		\scalebox{1.0}{
+			\begin{tabular}{c|c|c}
+				\hline
+				Round & Q-BOT (no caption) & Q-BOT (caption) \\ \hline
+				0     & 50.39             & \textbf{95.69}          \\
+				1     & 50.49             & \textbf{95.74}         \\
+				2     & 50.99             & \textbf{95.77}          \\
+				3     & 51.39             & \textbf{96.08}          \\
+				4     & 51.38             & \textbf{96.15}          \\
+				5     & 52.07             & \textbf{96.23}          \\
+				6     & 51.47             & \textbf{97.13}          \\
+				7     & 52.39             & \textbf{97.01}          \\
+				8     & 52.98             & \textbf{97.02}         \\
+				9     & 53.40             & \textbf{97.02}         \\
+				10    & 53.46             & \textbf{97.03}          \\ \hline
+			\end{tabular}
+		}
+		\caption{Caption analysis of image retrieval on the test split of VisDial v1.0.}
+		\label{Tab5}
+	\end{table}
+	
+	\begin{figure*}[]
+		\centering
+		\includegraphics[width=0.8\textwidth]{picture/ab_Caption.pdf}
+		\centering 
+		
+		\caption{The comparison of the variants about caption information.} 
+		\label{fig.ab_Caption}
+	\end{figure*}
+
+	
+	\textbf{Ablation study on image retrieval.} 
+	As emphasized before, this work is focused on the `GuessWhich' based visual dialog. Thus, the effect of different components in AMN on image retrieval is evaluated in this part. 
+	We respectively verify the impact of memory network and caption information on image retrieval. 
+	The design of the variants is the same as the ablation study of visual dialog. The corresponding results about memory network analysis are shown in Tab.~\ref{Tab4}. 
+	Moreover, we also draw a more intuitive line chart as shown in Fig.~\ref{fig.mn_ab}.  
+	We have the following observations: 1) whether the memory network is in A-BOT or B-BOT, it can increase the performance of image retrieval on percentile. Compared with \emph{Q-BOT (no MN), A-BOT (no MN)}, \emph{Q-BOT (MN), A-BOT (MN)} improves retrieval quality about 4\%.
+	2) \emph{Q-BOT (no MN), A-BOT (MN)} outperforms \emph{Q-BOT (MN), A-BOT (no MN)} by more than 2\% on percentile. The memory network can help A-BOT generate more accurate answers which are important for retrieval quality, and the attentive history plays a more significant role in answers generation. 
+	The caption analysis and its line chart are shown in Tab.~\ref{Tab5} and Fig.~\ref{fig.ab_Caption}. 
+	Because the A-BOT can see the real image which contains more visual information, there is only a single variant of Q-BOT about the caption. 
+	The performance of the model without caption confusion in Q-BOT declines violently, which proves the importance of the caption information for image retrieval. 
+	
+
+	\section{Conclusion}
+	In this paper, we play a cooperative `image guessing' game between Q-BOT and A-BOT to achieve effective visual dialog, and propose a novel Attentive Memory Network (AMN) which makes full use of historical dialog and caption information.
+	The generated dialogs of existing methods are repeated frequently, and their interactions are often invalid. Moreover, the retrieval performance descends after some rounds. 
+	The AMN can help the Q-BOT to produce more valuable questions by memory reading and information fusion. And the attentive history dialogs also can improve the quality of answers. Meanwhile, the accuracy and stability of image retrieval will also be improved. The model is firstly pre-trained on VisDial v1.0, and then fine-tuned by reinforcement learning. Extensive experimental results have shown the superiority of our methods over the state-of-the-art `GuessWhich' based visual dialog methods.
+	
+\bibliography{mybibfile}
+	
+\end{document}
