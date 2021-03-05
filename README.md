@@ -1,5 +1,6 @@
 # GuessWhich? Visual dialog with attentive memory network (Pattern Recognition)
 LeiZhao, XinyuLyu, JingkuanSong, LianliGao
+
 *Paper: https://www.sciencedirect.com/science/article/pii/S0031320321000108?utm_campaign=STMJ_AUTH_SERV_PUBLISHED&utm_medium=email&utm_acid=128326383&SIS_ID=&dgcid=STMJ_AUTH_SERV_PUBLISHED&CMX_ID=&utm_in=DM121054&utm_source=AC_*
 ### Our contribution includes:
 1. Retrieve a specific picture from the picture dataset by talking between two robots.
